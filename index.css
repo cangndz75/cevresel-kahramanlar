@@ -2070,19 +2070,23 @@ body {
     }
 }
 
+/* ================================= */
+/* GENEL MOBİL DÜZENLEMELER (max-width: 768px) */
+/* ================================= */
 @media (max-width: 768px) {
-    /* Body ve HTML tam ekran, kaydırma engelli */
+
+    /* Body ve HTML tam ekran, kaydırma engelli (varsa) */
     html, body {
       margin: 0;
       padding: 0;
       width: 100%;
       height: 100%;
-      overflow: hidden; /* Tüm scroll'u kapatıyoruz */
+      overflow: hidden; /* Sayfa scroll kapalı */
       -webkit-overflow-scrolling: touch; 
       touch-action: manipulation;
     }
   
-    /* Arka plan videosu tam ekran, bozulmadan görünür */
+    /* Arka plan videosunu tam ekrana sığdırma (bozulmadan) */
     .background-video-container {
       position: absolute;
       top: 0;
@@ -2093,101 +2097,92 @@ body {
     }
     .background-video-container iframe,
     .background-video {
-        width: 100vw !important;
-        height: 100vh !important;
-        object-fit: cover;
-        transform: translate(-50%, -50%) scale(1); /* Gerekirse scale(1.8) azalt */
+      width: 100vw !important;
+      height: 100vh !important;
+      object-fit: cover;
+      transform: translate(-50%, -50%) scale(1);
     }
   
-    /* Sayfalar tam ekran, kaydırmasız */
+    /* Her sayfa tam ekran; overflow: hidden ile kaydırmayı kapatıyoruz */
     .page {
       position: absolute;
-      top: 0;
+      top: 0; 
       left: 0;
       width: 100%;
       height: 100%;
-      overflow: hidden; /* Sayfa içi scroll kapalı */
+      overflow: hidden; /* Mobilde dikey scroll engelleniyor */
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
     }
   
-    /* 2. sayfa vb. metinli kısımlarda fontları küçültüp ekrana sığdırma */
-    #character-intro-title {
-      font-size: 1.6rem; /* Mobilde biraz küçülttük */
-    }
-    #character-intro-description {
-      font-size: 0.95rem;
-      line-height: 1.4;
-      max-width: 90%; /* Daha dar tutabiliriz */
-      margin: 10px auto;
-    }
-    .character-intro-box {
-      flex-wrap: wrap;
-      gap: 10px;
-      justify-content: center;
-    }
-    .character-intro-img {
-      width: 100px; /* Görselleri mobilde küçült */
-    }
-  
-    .detail-btn {
-        display: flex !important;
-        position: fixed !important;
-        bottom: 15px !important; /* sayfanın altına 15px yukarıdan */
-        left: 15px !important;   /* soldan 15px içeride */
-        width: auto !important;
-        height: auto !important;
-        padding: 8px 16px !important; 
-        font-size: 14px !important;
-        writing-mode: horizontal-tb !important;
-        text-orientation: initial !important;
-        border-radius: 8px !important; 
-        background: white !important;
-        color: black !important;
-        box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
-        z-index: 2000; /* Modal’ın altında kalmaması için yüksek z-index */
-    }
-
+    /* Mobilde Karakter Title ve Subtitle biraz küçültülüp yukarıya alınabilir */
     .title {
-        margin-top: 10px !important; /* Yukarıdan biraz boşluk */
-        position: relative;          /* Gerekirse position absolute verilebilir */
-        font-size: 1.5rem !important;/* Mobilde biraz küçültebilirsin */
+      margin-top: 10px !important;
+      position: relative; 
+      font-size: 1.5rem !important; /* Mobilde küçültme */
     }
     .subtitle {
-        margin-top: 5px !important;
-        font-size: 1rem !important;  /* Mobilde altyazı boyutu */
-        max-width: 90%;
+      margin-top: 5px !important;
+      font-size: 1rem !important;
+      max-width: 90%;
     }
   
+    /* ================================= */
+    /* DETAY BUTONU SOL ALTTA DİKDÖRTGEN */
+    /* ================================= */
+    .detail-btn {
+      display: flex !important;
+      position: fixed !important;
+      bottom: 15px !important;  /* sayfanın en altından 15px yukarı */
+      left: 15px !important;    /* soldan 15px içerde */
+      width: auto !important;
+      height: auto !important;
+      padding: 8px 16px !important;
+      font-size: 14px !important;
+      writing-mode: horizontal-tb !important;
+      text-orientation: initial !important;
+      border-radius: 8px !important;
+      background: white !important;
+      color: black !important;
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+      z-index: 2000; /* Modal altında kalmasın diye */
+    }
+  
+    /* ================================= */
+    /* FOOTER SAĞ ALTTA */
+    /* ================================= */
     .footer {
-        position: fixed !important;
-        bottom: 15px !important;
-        right: 15px !important;
-        display: flex !important;
-        align-items: center;
-        justify-content: center;
-        background: rgba(0,0,0,0.4);
-        padding: 6px 12px;
-        border-radius: 8px;
-        z-index: 2000;
+      position: fixed !important;
+      bottom: 15px !important;
+      right: 15px !important;
+      display: flex !important;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0,0,0,0.4);
+      padding: 6px 12px;
+      border-radius: 8px;
+      z-index: 2000;
     }
     .footer hr {
-        display: none !important;
+      display: none !important; /* İstenmiyorsa */
     }
-    
     .footer-right {
-        margin: 0 !important;
+      margin: 0 !important;
     }
   
+    /* Modal açılınca footer, detail-btn ve indicator gizlensin */
     .modal-open .footer,
     .modal-open .detail-btn,
     .modal-open .page-indicator {
       display: none !important;
     }
   
-    /* Modal (Detay) tam ortada, kendi içinde kaydırmalı */
+    /* ================================= */
+    /* MODAL: EKRANIN TAMAMINI KAPLAMASIN,
+       ÜST-ALT BOŞLUK BIRAKARAK DIŞINA TIKLANABİLSİN
+    /* ================================= */
     .metalcan-detail,
     .piri-detail,
     .alem-detail,
@@ -2195,19 +2190,22 @@ body {
     .balca2-detail,
     .zeyrek-detail,
     .goril-detail {
-        position: fixed !important;
-        top: 50% !important;
-        left: 50% !important;
-        transform: translate(-50%, -50%) !important;
-        width: 90% !important;
-        max-width: 400px !important;
-        height: auto !important;
-        max-height: 80vh !important;
-        overflow-y: auto !important;
-        border-radius: 10px !important;
-        display: none;
-        opacity: 0;
-        z-index: 9999;
+      position: fixed !important;
+      /* Üst-alt boşluk için top/bottom yerine top: 10% / bottom: 10% da yapılabilir.
+         Ama en pratik: top: 50% + transform: translate(-50%, -50%). */
+      top: 50% !important;
+      left: 50% !important;
+      transform: translate(-50%, -50%) !important;
+      width: 90% !important;       /* Genişlik */
+      max-width: 400px !important; /* Maksimum genişlik */
+      max-height: 80vh !important; /* Yüksekliği %80, alt/üst boşluk */
+      overflow-y: auto !important; /* İçerik kaydırılabilir */
+      border-radius: 10px !important;
+      display: none; /* Başlangıçta kapalı */
+      opacity: 0;
+      z-index: 9999;
+      /* Arka plan tıklanabilir olsun diye 
+         backdrop veya .modal-backdrop da ekleyebilirsiniz. */
     }
     .metalcan-detail.active,
     .piri-detail.active,
@@ -2220,6 +2218,22 @@ body {
       opacity: 1;
     }
   
+    /* Modal başlığı ve kapatma butonunu sabit tutmak isterseniz */
+    .modal-header {
+      position: sticky; /* Scroll edilse de sabit kalır */
+      top: 0;
+      background: #fff;
+      z-index: 1; 
+      padding: 10px; 
+      border-bottom: 1px solid #ddd;
+    }
+    .close-btn {
+      position: absolute; /* sağ üst köşede sabit */
+      top: 10px;
+      right: 10px;
+    }
+  
+    /* Shift-left efektini iptal: sayfa kaymasın */
     .metalcan-content.shift-left,
     .piri-content.shift-left,
     .elektroman-content.shift-left,
@@ -2231,6 +2245,12 @@ body {
       transform: none !important;
     }
   
+    /* Homepage aktifken indicator gizli */
+    #homepage.page.active ~ .page-indicator {
+      display: none !important;
+    }
+  
+    /* Page-indicator mobilde dikey ortada gözüksün (homepage harici) */
     .page-indicator {
       display: flex !important;
       opacity: 1 !important;
@@ -2241,26 +2261,21 @@ body {
       flex-direction: column;
       gap: 8px;
     }
+  
+    /* Daha da ufak ekranlar için (örneğin 480px altı) */
+    @media (max-width: 480px) {
+      .detail-btn {
+        padding: 6px 12px !important;
+        font-size: 10px !important;
+        bottom: 10px !important;
+        left: 10px !important;
+      }
+      .footer {
+        padding: 4px 8px !important;
+        font-size: 0.8rem !important;
+        bottom: 10px !important;
+        right: 10px !important;
+      }
+    }
   }
   
-  @media (max-width: 768px) {
-    #homepage.page.active ~ .page-indicator {
-      display: none !important;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .detail-btn {
-      padding: 6px 12px !important;
-      font-size: 10px !important;
-      bottom: 10px !important;
-      left: 10px !important;
-    }
-    
-    .footer {
-      padding: 4px 8px !important;
-      font-size: 0.8rem !important;
-      bottom: 10px !important;
-      right: 10px !important;
-    }
-  }
