@@ -1,0 +1,857 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Çevreci Robotlar</title>
+    <meta name="description" content="Geleceğin çevreci kahramanları!">
+    <meta name="keywords" content="Çevreci Robotlar, MetalCan, Balca, sürdürülebilir teknoloji, yeşil robotlar">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:700,900|Merriweather:700&display=swap" rel="stylesheet">
+    <link href="./index.css" rel="stylesheet">
+</head>
+<body>
+    <div class="page-indicator">
+        <div class="indicator active" data-page="homepage"></div>
+        <div class="indicator" data-page="character-intro"></div>
+        <div class="indicator" data-page="metalcan"></div>
+        <div class="indicator" data-page="piri"></div>
+        <div class="indicator" data-page="elektroman"></div>
+        <div class="indicator" data-page="arca"></div>
+        <div class="indicator" data-page="balca2"></div>
+        <div class="indicator" data-page="zeyrek"></div>
+        <div class="indicator" data-page="goril"></div>
+
+    </div>
+    <div class="transition-overlay">
+        <div class="transition-content"></div>
+    </div>
+    <div class="page active" id="homepage">
+        <div class="background-video-container">
+            <iframe class="background-video"
+                src="https://player.vimeo.com/video/1059552483?background=1&autoplay=1&muted=1&loop=1&autopause=0&controls=0&transparent=0"
+                frameborder="0"
+                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+                title="cr-animasyon">
+            </iframe>
+        </div>
+        <div class="overlay"></div>
+        <div class="content">
+            <h1 class="homepage-title">Çevreci Robotlar</h1>
+            <p class="homepage-subtitle">Geleceğin çevreci kahramanları</p>
+            <button class="explore-btn" onclick="scrollToMission()">Keşfet</button>
+        </div>
+        <div class="scroll-icon" onclick="scrollToMission()">↓</div>
+    
+        <div id="mission" class="mission-section hidden">
+            <div class="mission-container">
+                <h1 class="mission-title">Misyonumuz</h1>
+                <p class="mission-text">
+                    Çevreci Robotlar olarak hedefimiz, çocuklara çevre bilincini aşılamak, 
+                    geri dönüşüm ve sürdürülebilirlik konularında farkındalık yaratmaktır.
+                    Robotlarımız, çocukların çevreye duyarlılıklarını artırırken eğlenerek öğrenmelerini sağlar.
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="page" id="character-intro">
+    <div class="character-intro-container">
+        <h1 id="character-intro-title">ÇEVRECİ ROBOTLAR</h1>
+
+        <p id="character-intro-description">
+            Tüm karakterlerimiz gelişim sürecinde olmakla beraber fiziksel form olarak tamamlanmış durumda ancak sürece bağlı olarak gösterecek değişiklerle üzerlerinde kozmetik modifikasyonlar da olacaktır. 
+            Karakterlerimizi; modern teknolojiden ve pedagojik çalışmalardan faydalanarak çocukların ilgisini çekebilecek ve onlara fayda sağlayacak şekilde tasarladık.
+            <br><br>
+            <span class="character-intro-highlight">Bütün karakterler, güçlü, barışçıl ve işbirlikçi kişilik özelliklerine sahiptir.</span>
+        </p>
+        
+        <div class="character-intro-box">
+            <img src="img/a.png" class="character-intro-img" id="character-a">
+            <img src="img/b.png" class="character-intro-img" id="character-b">
+            <img src="img/c.png" class="character-intro-img" id="character-c">
+        </div>
+    </div>
+</div>
+
+    <div class="page" id="metalcan">
+        <button class="detail-btn" onclick="openDetail('metalcan')">Detay</button>
+
+        <div class="metalcan-content">
+            <h1 class="title">Gürgür</h1>
+            <p class="subtitle">Ana atık taşıyıcı karakterdir. Geri dönüşümü temsil eder.</p>
+            <img src="./img/gürgür.png" alt="metalcan" class="robot-image">
+
+        </div>
+            
+        <div class="metalcan-detail modal" id="metalcanDetail">
+            <div class="modal-header">
+                <h2>Gürgür</h2>
+                <span class="close-btn" onclick="closeDetail('metalcan')">✖</span>
+            </div>
+            <div class="modal-body">
+                <p>
+                    Ana atık taşıyıcı karakterdir. Geri dönüşümü temsil eder. 
+                    Kağıt, plastik, metal ve cam atıkları bünyesinde barındırdığı farklı bölmelere doldurarak 
+                    atık dönüşüm tesislerine ulaştırmaktan sorumludur.
+                </p>
+        
+                <!-- Özellikler Kutusu -->
+                <div class="highlight-box">
+                    <p><strong>Özellikler:</strong></p>
+                    <ul>
+                        <li>Uykulu, sabırlı ve ağırkanlı bir robottur.</li>
+                        <li>Sempatik, sevimli, güler yüzlü ve saf bir karaktere sahiptir.</li>
+                        <li>Her zaman göstermediği yatıştırıcı, felsefi ve bilge bir yönü vardır.</li>
+                    </ul>
+                </div>
+        
+                <p class="info">
+                    Gürgür, çevreye duyarlı bir karakter olarak atık yönetimini sağlayarak, geri dönüşüm sürecine katkıda bulunur.
+                </p>
+            </div>
+        </div>
+        <div class="footer">
+            <hr>
+            <!-- <div class="footer-left">Çevreci Robotlar</div> -->
+            <div class="footer-right">Çevreci Robotlar</div>
+        </div>
+    </div>
+
+
+
+        <div class="page" id="piri">
+            <button class="detail-btn" onclick="openDetail('piri')">Detay</button>
+            <div class="piri-content">
+                <h1 class="title">Piri</h1>
+                <p class="subtitle">Su kirliliğini ve özellikle deniz çöplerini önlemeye yönelik halkın bilinçlendirilmesi çalışmalarını içeren Sıfır Atık Mavi hareketine katkı sağlar. </p>
+                <img src="./img/piri.png" alt="piri" class="piri-image">
+            </div>
+                
+            <div class="piri-detail modal" id="piriDetail">
+                <div class="modal-header">
+                    <h2>Piri</h2>
+                    <span class="close-btn" onclick="closeDetail('piri')">✖</span>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Su kirliliğini ve özellikle deniz çöplerini önlemeye yönelik halkın bilinçlendirilmesi çalışmalarını içeren 
+                        <strong>Sıfır Atık Mavi</strong> hareketine katkı sağlar. 
+                    </p>
+                    <p>
+                        Yüze bilen ve kolları ahtapot şeklinde olan robot kahramanımız, denizin dibini temizlemek için 
+                        uzayabilen kollarını kullanır.
+                    </p>
+            
+                    <!-- Özellikler Kutusu -->
+                    <div class="highlight-box">
+                        <p><strong>Özellikler:</strong></p>
+                        <ul>
+                            <li>Sakin, çekingen, panik, ürkek ve temkinli bir karaktere sahiptir.</li>
+                            <li>Deniz dışına çıkıp sahil ve kara temizliğine de yardımcı olabilir.</li>
+                            <li>Deniz ekosisteminin korunmasına katkı sağlar.</li>
+                        </ul>
+                    </div>
+            
+                    <p class="info">
+                        Piri, hassas yapısına rağmen çevreyi koruma konusunda kararlı ve 
+                        su ekosistemini temiz tutmaya odaklanmış bir robottur.
+                    </p>
+                </div>
+            </div>
+            <div class="footer">
+                <hr>
+                <!-- <div class="footer-left">Çevreci Robotlar</div> -->
+                <div class="footer-right">Çevreci Robotlar</div>
+            </div>
+        </div>
+    
+        <div class="page" id="alem">
+            <button class="detail-btn" onclick="openDetail('alem')">Detay</button>
+
+            <div class="alem-content">
+                <h1 class="title">Alem</h1>
+                <p class="subtitle">Hava kirliliğini önlemeye çalışan robottur.</p>
+                <img src="./img/alem.png" alt="alem" class="elektroman-image">
+            </div>
+                
+            <div class="alem-detail modal" id="alemDetail">
+                <div class="modal-header">
+                    <h2>Alem</h2>
+                    <span class="close-btn" onclick="closeDetail('alem')">✖</span>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Hava kirliliğini önlemeye çalışan robottur. Bulut ve drone ile karakterize olup uçabilir. 
+                        Daha iyi gözlem yapmak için kafasının etrafında dönen bir çift gözü vardır. Her zaman pür dikkattir.
+                    </p>
+            
+                    <!-- Özellikler Kutusu -->
+                    <div class="highlight-box">
+                        <p><strong>Özellikler:</strong></p>
+                        <ul>
+                            <li>Havayı temizleme yeteneğine sahiptir.</li>
+                            <li>Arkadaşlarına yeryüzündeki kirlilikler konusunda bilgi verir.</li>
+                            <li>Çok titizdir ve kirlenmeye tahammülü yoktur.</li>
+                            <li>Meteorolojik olaylar hakkında bilgi sağlar.</li>
+                        </ul>
+                    </div>
+            
+                    <p class="info">
+                        Alem, hava kirliliğiyle mücadelede en önemli rollerden birini üstlenen, 
+                        çevreyi gözlemleyen ve ekosisteme duyarlı bir robottur.
+                    </p>
+                </div>
+            </div>
+            <div class="footer">
+                <hr>
+                <!-- <div class="footer-left">Çevreci Robotlar</div> -->
+                <div class="footer-right">Çevreci Robotlar</div>
+            </div>
+        </div>
+
+            
+        <div class="page" id="arca">
+            <button class="detail-btn" onclick="openDetail('arca')">Detay</button>
+
+            <div class="arca-content">
+                <h1 class="title">Arca</h1>
+                <p class="subtitle">Organik atıkların dönüşümünden sorumlu robottur.</p>
+                <img src="./img/arca.png" alt="arca" class="arca-image">
+            </div>
+                
+            <div class="arca-detail modal" id="arcaDetail">
+                <div class="modal-header">
+                    <h2>Arca</h2>
+                    <span class="close-btn" onclick="closeDetail('arca')">✖</span>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Organik atıkların dönüşümünden sorumlu robottur. Ağaç köklerini çapalamak, 
+                        bünyesinde oluşturduğu gübreyi toprağa gömmek için fazladan bir uzvu vardır.
+                    </p>
+            
+                    <!-- Özellikler Kutusu -->
+                    <div class="highlight-box">
+                        <p><strong>Özellikler:</strong></p>
+                        <ul>
+                            <li>Karınca gibi çalışkan, hareketli, neşeli ve esprili bir karakterdir.</li>
+                            <li>Sürekli yediği organik atıklardan dolayı gaz çıkarmaktadır.</li>
+                            <li>Arkadaşlarıyla yardımlaşmayı ve işbirliğini çok sever.</li>
+                            <li>Karar alma sürecinde kararsızdır ancak deneyimleriyle özgüven kazanır.</li>
+                        </ul>
+                    </div>
+            
+                    <p class="info">
+                        Arca, kararlarını zamanla geliştiren ve iç sesini dinleyerek özgüven kazanan 
+                        çevreci bir robot olarak dikkat çeker.
+                    </p>
+                </div>
+            </div>
+            <div class="footer">
+                <hr>
+                <!-- <div class="footer-left">Çevreci Robotlar</div> -->
+                <div class="footer-right">Çevreci Robotlar</div>
+            </div>
+        </div>
+
+        <div class="page" id="balca2">
+            <button class="detail-btn" onclick="openDetail('balca2')">Detay</button>
+
+            <div class="balca2-content">
+                <h1 class="title">Balca</h1>
+                <p class="subtitle">Kanatları sayesinde uçma yeteneğine sahip olan Balca, hem yürüyen hem de uçabilen bir karakterdir.</p>
+                <img src="./img/balca.png" alt="arca" class="balca-image">
+            </div>
+                
+            <div class="balca2-detail modal" id="balca2Detail">
+                <div class="modal-header">
+                    <h2>Balca</h2>
+                    <span class="close-btn" onclick="closeDetail('balca2')">✖</span>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Kanatları sayesinde uçma yeteneğine sahip olan Balca, hem yürüyen hem de uçabilen bir karakterdir. 
+                        Arı gibi çalışkandır. Dışa dönük ve konuşkan bir karakterdir.
+                    </p>
+            
+                    <!-- Özellikler Kutusu -->
+                    <div class="highlight-box">
+                        <p><strong>Özellikler:</strong></p>
+                        <ul>
+                            <li>İlaçlanan bitkilerin üzerindeki ilaçları yıkayarak insanların bu ilaçlardan etkilenmesini önler.</li>
+                            <li>Gerektiğinde çiftçiye ve çocuklara eğitim verir.</li>
+                            <li>Pektisitleri sevmez, organik üretim konusunda bilgilidir.</li>
+                            <li>Arca ile birlikte organik tarım konusunda işbirliği yapar.</li>
+                        </ul>
+                    </div>
+            
+                    <p class="info">
+                        Balca, insanları bilinçlendirme misyonuyla hareket eden, çalışkan ve yardımsever bir robottur.
+                    </p>
+                </div>
+            </div>
+            <div class="footer">
+                <hr>
+                <!-- <div class="footer-left">Çevreci Robotlar</div> -->
+                <div class="footer-right">Çevreci Robotlar</div>
+            </div>
+        </div>
+
+        <div class="page" id="zeyrek">
+            <button class="detail-btn" onclick="openDetail('zeyrek')">Detay</button>
+
+            <div class="zeyrek-content">
+                <h1 class="title">Zeyrek</h1>
+                <p class="subtitle">Işık ve ses kirliliğini azaltmaya yardımcı olur. </p>
+                <img src="./img/zeyrek.png" alt="zeyrek" class="balca-image">
+            </div>
+                
+            <div class="zeyrek-detail modal" id="zeyrekDetail">
+                <div class="modal-header">
+                    <h2>Zeyrek</h2>
+                    <span class="close-btn" onclick="closeDetail('zeyrek')">✖</span>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Işık ve ses kirliliğini azaltmaya yardımcı olur. Hacıyatmaz formunda olup, aynı zamanda bir işe hızlı bir şekilde yetişmesini ve 
+                        her yöne hareket etmesini sağlayan bir küreyle hareket etmektedir.
+                    </p>
+            
+                    <!-- Özellikler Kutusu -->
+                    <div class="highlight-box">
+                        <p><strong>Özellikler:</strong></p>
+                        <ul>
+                            <li>Eğlenceli, oldukça hızlı ve hareketlidir.</li>
+                            <li>Müzik yapan ve dans eden çok neşeli bir robottur.</li>
+                            <li>Işık ve ses kirliliğini fark eden sensörleriyle tehlikeyi merkeze bildirir.</li>
+                        </ul>
+                    </div>
+            
+                    <p class="info">
+                        Zeyrek, çevresindeki ışık ve ses kirliliğini anında algılayarak, gerektiğinde merkeze bildirim gönderen bir sistemle donatılmıştır.
+                    </p>
+                </div>
+            </div>
+            <div class="footer">
+                <hr>
+                <!-- <div class="footer-left">Çevreci Robotlar</div> -->
+                <div class="footer-right">Çevreci Robotlar</div>
+            </div>
+        </div>
+
+        <div class="page" id="goril">
+            <button class="detail-btn" onclick="openDetail('goril')">Detay</button>
+
+            <div class="goril-content">
+                <h1 class="title">Goril</h1>
+                <p class="subtitle">Tam bir doğa aşığı ve ormanların savunucusu olan Goril, genel olarak çevre ve toprak kirliliğinden sorumlu robottur.</p>
+                <img src="./img/goril.png" alt="zeyrek" class="balca-image">
+            </div>
+                
+            <div class="goril-detail modal" id="gorilDetail">
+                <div class="modal-header">
+                    <h2>Goril</h2>
+                    <span class="close-btn" onclick="closeDetail('goril')">✖</span>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Tam bir doğa aşığı ve ormanların savunucusu olan Goril, genel olarak çevre ve toprak kirliliğinden sorumlu robottur.
+                        Radyasyon kirliliği ve elektromanyetik kirliliğin önlenmesinden de sorumludur.
+                    </p>
+                    <p>
+                        Doğayı kirletenlerin ve çevreye zarar verenlerin korkulu rüyası olan robotumuz, bacaklarını kullanarak yürüyebildiği gibi 
+                        ayaklarındaki tekerlekler sayesinde çok daha hızlı ilerleyebilir. Uzayan kollarıyla atıkları ayırarak Gürgür'e yüklemektedir.
+                    </p>
+            
+                    <!-- Özellikler Kutusu -->
+                    <div class="highlight-box">
+                        <p><strong>Özellikler:</strong></p>
+                        <ul>
+                            <li>Uzayan kollarıyla atıkları ayrıştırır ve Gürgür'e yükler.</li>
+                            <li>Çevik, atak ve çabuk öfkelenen ancak kolay sakinleşebilen bir yapıya sahiptir.</li>
+                            <li>Güçlü görüntüsünün arkasında derin bir bilgelik barındırır.</li>
+                        </ul>
+                    </div>
+            
+                    <p class="info">
+                        Güçlü görüntüsünün arkasındaki bilgelik, insanların neden çevreyi kirlettiğini anlamasını zorlaştırmaktadır.
+                    </p>
+                </div>
+            </div>
+            
+                        <div class="footer">
+                <hr>
+                <!-- <div class="footer-left">Çevreci Robotlar</div> -->
+                <div class="footer-right">Çevreci Robotlar</div>
+            </div>
+        </div>
+
+
+<!-- 
+    <div class="modal-wrapper" id="modalMetalcan">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('modalMetalcan')">✖</span>
+            <h2>MetalCan Hakkında</h2>
+            <p>MetalCan, çevreci robot teknolojisinde lider bir inovasyon örneğidir.</p>
+        </div>
+    </div>
+    
+    <div class="modal-wrapper" id="modalBalca">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('modalBalca')">✖</span>
+            <h2>Balca Hakkında</h2>
+            <p>Balca, doğa dostu ve sürdürülebilir robot teknolojilerinin geleceğidir.</p>
+        </div>
+    </div>
+     -->
+
+     <script>
+        let currentPage = 0;
+        const pages = document.querySelectorAll(".page");
+        const indicators = document.querySelectorAll(".indicator");
+        const totalPages = pages.length;
+    
+        let isTransitioning = false;
+let scrollProgress = 0;
+let targetProgress = 0;
+
+function applyCircleTransition(targetPage) {
+    if (isTransitioning || targetPage === currentPage) return;
+    isTransitioning = true;
+
+    const overlay = document.querySelector(".transition-overlay");
+
+    const direction = targetPage > currentPage ? "forward" : "backward";
+
+    overlay.classList.add("active");
+
+    function onScroll(event) {
+        targetProgress += event.deltaY * 0.03; // Scroll hızına duyarlılık
+        targetProgress = Math.max(0, Math.min(100, targetProgress));
+
+        function animate() {
+            scrollProgress += (targetProgress - scrollProgress) * 0.2;
+
+            // **İleri gidiyorsa büyükten küçüğe küçülme**
+            if (direction === "forward") {
+                overlay.style.clipPath = `circle(${100 - scrollProgress}% at 50% 50%)`;
+            } 
+            // **Geri gidiyorsa küçükten büyüğe genişleme**
+            else {
+                overlay.style.clipPath = `circle(${scrollProgress * 1.5}% at 50% 50%)`;
+            }
+
+            if (Math.abs(scrollProgress - targetProgress) > 0.5) {
+                requestAnimationFrame(animate);
+            } else {
+                if (scrollProgress >= 100) {
+                    window.removeEventListener("wheel", onScroll);
+                    
+                    scrollToPage(targetPage);
+
+                    setTimeout(() => {
+                        overlay.style.clipPath = "circle(0% at 50% 50%)"; // Geri küçült
+                        overlay.classList.remove("active");
+                        scrollProgress = 0;
+                        targetProgress = 0;
+                        isTransitioning = false;
+                    }, 200);
+                }
+            }
+        }
+
+        requestAnimationFrame(animate);
+    }
+
+    window.addEventListener("wheel", onScroll);
+}
+    
+function scrollToPage(page) {
+    if (page >= 0 && page < totalPages) {
+        pages.forEach((p, index) => {
+            if (index === page) {
+                p.classList.add("active");
+                p.style.display = "flex";
+            } else {
+                p.classList.remove("active");
+                p.style.display = "none";
+            }
+        });
+
+        // Homepage'de Detay butonunu gizle
+        const detailButton = document.querySelector(".detail-btn");
+        if (page === 0) {
+            detailButton.style.display = "none";
+        } else {
+            detailButton.style.display = "flex";
+        }
+
+        currentPage = page;
+        updateIndicators();
+    }
+}
+
+
+// **FARE TEKERLEĞİ (SCROLL) İLE SAYFA GEÇİŞİ**
+let isScrolling = false;
+document.addEventListener("wheel", (event) => {
+    if (!isScrolling) {
+        isScrolling = true;
+        if (event.deltaY > 0 && currentPage < totalPages - 1) {
+            scrollToPage(currentPage + 1);
+        } else if (event.deltaY < 0 && currentPage > 0) {
+            scrollToPage(currentPage - 1);
+        }
+        setTimeout(() => isScrolling = false, 800); // 0.8 saniye bekletme
+    }
+});
+
+        
+    indicators.forEach((indicator, index) => {
+        indicator.addEventListener("click", () => {
+            scrollToPage(index); // Tıklanan indicator'un index'ine göre sayfaya geçiş yap
+        });
+    });
+
+    // **INDICATOR GÜNCELLEME FONKSİYONU**
+    function updateIndicators() {
+        indicators.forEach((indicator, index) => {
+            indicator.classList.toggle("active", index === currentPage);
+        });
+    }
+
+
+    
+        // **"KEŞFET" BUTONU TIKLANDIĞINDA METALCAN SAYFASINA GEÇİŞ**
+        document.querySelector(".explore-btn").addEventListener("click", () => scrollToPage('character-intro'));
+    
+        // **MODAL KONTROLLERİ**
+        
+        // Modal açma fonksiyonu
+        function openModal(id) {
+            document.getElementById(id).classList.add("open");
+        }
+        
+        // Modal kapatma fonksiyonu
+        function closeModal(id) {
+            document.getElementById(id).classList.remove("open");
+        }
+    
+        // **ESC TUŞUNA BASILDIĞINDA MODALI KAPATMA**
+        document.addEventListener("keydown", (event) => {
+            if (event.key === "Escape") {
+                document.querySelectorAll(".modal-wrapper.open").forEach(modal => {
+                    modal.classList.remove("open");
+                });
+            }
+        });
+    
+        // **SAYFADA TIKLAMA İLE MODALI KAPATMA**
+        document.addEventListener("click", (event) => {
+            if (event.target.classList.contains("modal-wrapper")) {
+                event.target.classList.remove("open");
+            }
+        });
+    
+        window.onload = function() {
+            document.getElementById("homepage").style.backgroundImage = "url('.img/Resim4.png')";
+        };
+    </script>
+    
+
+        <script>
+let currentCard = 0;
+const cards = document.querySelectorAll(".card");
+
+// İlk kartı aktif yap
+cards[currentCard].classList.add("active");
+
+function nextCard() {
+    if (currentCard < cards.length - 1) {
+        cards[currentCard].classList.remove("active");
+        cards[currentCard].classList.add("exit-down");
+
+        currentCard++;
+
+        cards[currentCard].classList.remove("enter-up", "exit-down");
+        cards[currentCard].classList.add("active");
+    }
+}
+
+function prevCard() {
+    if (currentCard > 0) {
+        cards[currentCard].classList.remove("active");
+        cards[currentCard].classList.add("enter-up");
+
+        currentCard--;
+
+        cards[currentCard].classList.remove("exit-down", "enter-up");
+        cards[currentCard].classList.add("active");
+    }
+}
+
+
+// Klavye yön tuşları ile kart geçişi
+document.addEventListener("keydown", (event) => {
+    if (event.key === "ArrowUp") {
+        prevCard();
+    } else if (event.key === "ArrowDown") {
+        nextCard();
+    }
+});
+
+
+// **Kart geçişlerini butonlarla kontrol etme**
+document.querySelector(".control-btn.up").addEventListener("click", prevCard);
+document.querySelector(".control-btn.down").addEventListener("click", nextCard);
+
+// // **Detay butonu için event listener ekle**
+// document.querySelector(".control-btn.detail").addEventListener("click", openDetail);
+// document.querySelector(".close-btn").addEventListener("click", closeDetail);
+
+// Modal açma fonksiyonu
+function openDetail(robotId) {
+    const detail = document.querySelector(`#${robotId}Detail`);
+    const content = document.querySelector(`#${robotId} .${robotId}-content`);
+    
+    if (!detail || !content) {
+        console.error(`Hata: ${robotId} için içerik veya detay bölümü bulunamadı!`);
+        return;
+    }
+
+    detail.classList.add("active");
+    detail.style.display = "block";
+    content.classList.add("shift-left"); // İçeriği sola kaydır
+
+    // Sayfa dışına tıklayınca kapatma işlemi
+    setTimeout(() => {
+        document.addEventListener("click", outsideClickHandler);
+    }, 10);
+}
+
+// Modal kapatma fonksiyonu
+function closeDetail(robotId) {
+    const detail = document.querySelector(`#${robotId}Detail`);
+    const content = document.querySelector(`#${robotId} .${robotId}-content`);
+
+    if (!detail || !content) {
+        console.error(`Hata: ${robotId} için içerik veya detay bölümü bulunamadı!`);
+        return;
+    }
+
+    detail.classList.remove("active");
+    detail.style.display = "none";
+    content.classList.remove("shift-left"); // İçeriği geri al
+
+    // Sayfa dışına tıklama dinleyicisini kaldır
+    document.removeEventListener("click", outsideClickHandler);
+}
+
+// Sayfa dışına tıklama ile modalı kapatma
+function outsideClickHandler(event) {
+    const modal = document.querySelector(".modal.active");
+    if (modal && !modal.contains(event.target) && !event.target.classList.contains("detail-btn")) {
+        closeDetail("metalcan");
+        closeDetail("piri");
+        closeDetail("alem");
+        closeDetail("arca");
+        closeDetail("balca2");
+        closeDetail("zeyrek");
+        closeDetail("goril");
+    }
+}
+
+// **Her robota ayrı event listener ekleyelim**
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".detail-btn").forEach((button) => {
+        button.addEventListener("click", function () {
+            const robotId = this.getAttribute("onclick").match(/'([^']+)'/)[1];
+            openDetail(robotId);
+        });
+    });
+
+    document.querySelectorAll(".back-btn").forEach((button) => {
+        button.addEventListener("click", function () {
+            const robotId = this.getAttribute("onclick").match(/'([^']+)'/)[1];
+            closeDetail(robotId);
+        });
+    });
+});
+
+
+
+
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js"></script>
+        <script>
+            gsap.to(".animated-text", { opacity: 1, duration: 1 });
+        
+            gsap.to(".word", {
+                opacity: 1,
+                y: 0,
+                stagger: 0.1, // Her harf arasında küçük bir gecikme
+                ease: "back.out(1.7)", // Hafif geri sıçrama efekti
+                duration: 1.2
+            });
+        </script>
+        <script>
+       document.addEventListener("DOMContentLoaded", function () {
+    window.addEventListener("scroll", function () {
+        let footer = document.querySelector(".footer");
+        let lastPage = document.querySelector(".last-page");
+        let lastPageTop = lastPage.getBoundingClientRect().top;
+        let windowHeight = window.innerHeight;
+
+        // Eğer en son sayfa (last-page) ekrana girmişse footer'ı göster
+        if (lastPageTop < windowHeight / 1.5) {
+            footer.style.display = "block";
+        } else {
+            footer.style.display = "none";
+        }
+    });
+});
+
+        </script><script>
+        function scrollToNext() {
+            document.getElementById("info-section").scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+    function updateDetailButtonVisibility() {
+        const detailButton = document.querySelector(".detail-btn");
+        const activePage = document.querySelector(".page.active");
+
+        if (activePage && activePage.id === "homepage") {
+            detailButton.style.display = "none";
+        } else {
+            detailButton.style.display = "flex"; // Sayfa değiştiğinde geri getir
+        }
+    }
+
+    // Sayfa değiştiğinde butonu kontrol et
+    document.addEventListener("wheel", updateDetailButtonVisibility);
+    document.addEventListener("click", updateDetailButtonVisibility);
+
+    // Sayfa yüklenirken kontrol et
+    updateDetailButtonVisibility();
+});
+
+        </script>
+        <script>
+            function updateIndicatorVisibility() {
+    const indicator = document.querySelector(".page-indicator");
+    const activePage = document.querySelector(".page.active");
+
+    if (activePage && activePage.id === "homepage") {
+        indicator.style.opacity = "0";
+        indicator.style.visibility = "hidden";
+    } else {
+        indicator.style.opacity = "1";
+        indicator.style.visibility = "visible";
+    }
+}
+
+// Sayfa yüklendiğinde gizli başlasın
+window.addEventListener("load", updateIndicatorVisibility);
+
+// Sayfa değiştiğinde tekrar kontrol et
+document.addEventListener("wheel", updateIndicatorVisibility);
+document.addEventListener("click", updateIndicatorVisibility);
+
+        </script>
+        <script>
+            function scrollToCharacterIntro() {
+                const characterIntro = document.getElementById("character-intro");
+                characterIntro.classList.remove("hidden");
+                characterIntro.scrollIntoView({ behavior: 'smooth' });
+    
+                setTimeout(() => {
+                    document.getElementById("character-a").classList.add("visible");
+                    setTimeout(() => {
+                        document.getElementById("character-b").classList.add("visible");
+                        setTimeout(() => {
+                            document.getElementById("character-c").classList.add("visible");
+                        }, 400);
+                    }, 400);
+                }, 400);
+            }
+        </script>
+        <script>
+document.addEventListener("scroll", function () {
+    const missionSection = document.getElementById("mission");
+    const scrollPosition = window.scrollY;
+    const windowHeight = window.innerHeight;
+    const triggerPoint = windowHeight * 0.6; // %60 kaydırıldığında tetikle
+
+    if (scrollPosition > triggerPoint) {
+        missionSection.classList.add("visible"); // Misyon bölümünü aç
+    }
+});
+
+
+        </script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+            setTimeout(() => {
+                document.getElementById("character-intro-title").classList.add("visible");
+            }, 300);
+
+            setTimeout(() => {
+                document.getElementById("character-intro-description").classList.add("visible");
+            }, 800);
+
+            setTimeout(() => {
+                document.getElementById("character-a").classList.add("visible");
+            }, 1200);
+
+            setTimeout(() => {
+                document.getElementById("character-b").classList.add("visible");
+            }, 1600);
+
+            setTimeout(() => {
+                document.getElementById("character-c").classList.add("visible");
+            }, 2000);
+        });
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const title = document.getElementById('character-intro-title');
+    const description = document.getElementById('character-intro-description');
+    const images = document.querySelectorAll('.character-intro-img');
+
+    const observerOptions = {
+        root: null,
+        threshold: 0.1,
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                title.classList.add('visible');
+                description.classList.add('visible');
+                images.forEach((img, index) => {
+                    setTimeout(() => {
+                        img.classList.add('visible');
+                    }, index * 300); // Her resim 300ms aralıklarla görünecek
+                });
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    observer.observe(document.querySelector('.character-intro-container'));
+});
+
+</script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/framer-motion/10.12.0/framer-motion.min.js"></script>
+
+</body>
+</html>

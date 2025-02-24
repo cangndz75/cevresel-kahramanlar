@@ -1,0 +1,2038 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+    height: 100vh;
+    background-size: cover;
+    background-color: rgba(255, 255, 255, 0.7); /* Saydamlık efekti */
+    backdrop-filter: blur(5px); /* Hafif bulanıklık efekti */
+}
+
+
+        .container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+        }
+
+
+
+#metalcan {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: url('./img/gürgür2.jpg') no-repeat center center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.5); /* Hafif siyah saydamlık */
+    backdrop-filter: blur(5px); /* Hafif bulanıklık efekti */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    clip-path: circle(100% at center);
+}
+
+#piri {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: url('./img/alem2.jpg') no-repeat center center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.5); /* Hafif siyah saydamlık */
+    backdrop-filter: blur(5px); /* Hafif bulanıklık efekti */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    clip-path: circle(100% at center);
+}
+
+#balca2{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: url('./img/balc2.jpg') no-repeat center center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.5); /* Hafif siyah saydamlık */
+    backdrop-filter: blur(5px); /* Hafif bulanıklık efekti */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    clip-path: circle(100% at center);
+}
+
+#elektroman {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: url('./img/alem2.jpg') no-repeat center center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.5); /* Hafif siyah saydamlık */
+    backdrop-filter: blur(5px); /* Hafif bulanıklık efekti */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    clip-path: circle(100% at center);
+}
+
+#arca {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: url('./img/alem2.jpg') no-repeat center center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.5); /* Hafif siyah saydamlık */
+    backdrop-filter: blur(5px); /* Hafif bulanıklık efekti */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    clip-path: circle(100% at center);
+}
+
+#alem {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: url('./img/alem2.jpg') no-repeat center center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.5); /* Hafif siyah saydamlık */
+    backdrop-filter: blur(5px); /* Hafif bulanıklık efekti */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    clip-path: circle(100% at center);
+}
+#goril {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: url('./img/alem2.jpg') no-repeat center center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.5); /* Hafif siyah saydamlık */
+    backdrop-filter: blur(5px); /* Hafif bulanıklık efekti */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    clip-path: circle(100% at center);
+}
+#zeyrek {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: url('./img/alem2.jpg') no-repeat center center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.5); /* Hafif siyah saydamlık */
+    backdrop-filter: blur(5px); /* Hafif bulanıklık efekti */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    clip-path: circle(100% at center);
+}
+
+.back-btn {
+            background: linear-gradient(45deg, #6BC4CA, #3E6A47);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 16px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+        }
+        .back-btn:hover {
+            background: linear-gradient(45deg, #3E6A47, #6BC4CA);
+            transform: scale(1.05);
+        }
+
+        .metalcan-content .detail-btn {
+    opacity: 1;
+    visibility: visible;
+}
+/* İçeriği sola kaydırma efekti */
+.metalcan-content,
+.piri-content,
+.elektroman-content,
+.alem-content,
+.arca-content,
+.balca2-content,
+.zeyrek-content,
+.goril-detail,
+.piri-detail {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.8s ease-in-out;
+}
+
+.metalcan-content.shift-left,
+.piri-content.shift-left,
+.elektroman-content.shift-left,
+.alem-content.shift-left,
+.arca-content.shift-left,
+.balca2-content.shift-left,
+.zeyrek-content.shift-left,
+.goril-content.shift-left{
+    transform: translateX(-40%);
+}
+
+/* Detay ekranlarını başlangıçta gizli yap */
+.metalcan-detail,
+.piri-detail,
+.elektroman-detail,
+.arca-detail,
+.alem-detail,
+.balca2-detail,
+.zeyrek-detail,
+.goril-detail {
+    position: absolute;
+    top: 50%;
+    right: -50%;
+    transform: translateY(-50%);
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    transition: right 0.8s ease-in-out, opacity 0.5s ease-in-out;
+    width: 40%;
+    color: black;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    display: none; /* Başlangıçta görünmez */
+}
+
+/* Aktif olunca görünür yap */
+.metalcan-detail.active,
+.piri-detail.active,
+.elektroman-detail.active ,
+.piri-detail.active,
+.arca-detail.active,
+.alem-detail.active,
+.balca2-detail.active,
+.zeyrek-detail.active,
+.goril-detail.active {
+    right: 5%;
+    opacity: 1;
+    display: block;
+}
+
+
+/* Animasyon sırasında elemanların kaybolmasını engelle */
+.metalcan-content.shift-left .robot-image,
+.metalcan-content.shift-left .title,
+.metalcan-content.shift-left .subtitle {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.metalcan-content .title {
+    font-size: 36px;
+    font-weight: 900;
+    color: #FFD700; /* Altın sarısı */
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
+    padding: 10px 20px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.metalcan-content .subtitle {
+    font-size: 20px;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 5px 15px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.metalcan-content .robot-image{    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+/* Detaya basınca içeriği görünür yap */
+.detail-active .metalcan-detail {
+    transform: translateX(-100%);
+}
+
+/* Geri Butonu */
+.metalcan-close-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: white;
+    color: black;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+}
+
+
+.piri-content {
+    position: relative; /* Butonu bunun içinde hizalayacağız */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.8s ease-in-out;
+}
+
+        .piri-content.shift-left {
+            transform: translateX(-40%);
+        }
+
+
+        .piri-detail {
+            position: absolute;
+            top: 50%;
+            right: -50%;
+            transform: translateY(-50%);
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            transition: right 0.8s ease-in-out;
+            width: 40%;
+            color: black;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+        }
+
+        .piri-detail.active {
+            right: 5%;
+            opacity: 1;
+        }
+
+/* Animasyon sırasında elemanların kaybolmasını engelle */
+.piri-content.shift-left .piri-image,
+.piri-content.shift-left .title,
+.piri-content.shift-left .subtitle {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.piri-content .title {
+    font-size: 36px;
+    font-weight: 900;
+    color: #FFD700; /* Altın sarısı */
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
+    padding: 10px 20px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.piri-content .subtitle {
+    font-size: 20px;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 5px 15px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+
+.piri-content .robot-image{    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+/* Detaya basınca içeriği görünür yap */
+.detail-active .piri-detail {
+    transform: translateX(-100%);
+}
+
+/* Geri Butonu */
+.piri-close-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: white;
+    color: black;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+}
+
+.elektroman-content {
+    position: relative; /* Butonu bunun içinde hizalayacağız */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.8s ease-in-out;
+}
+
+        .elektroman-content.shift-left {
+            transform: translateX(-40%);
+        }
+
+
+        .elektroman-detail {
+            position: absolute;
+            top: 50%;
+            right: -50%;
+            transform: translateY(-50%);
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            transition: right 0.8s ease-in-out;
+            width: 40%;
+            color: black;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+        }
+
+        .elektroman-detail.active {
+            right: 5%;
+            opacity: 1;
+        }
+
+/* Animasyon sırasında elemanların kaybolmasını engelle */
+.elektroman-content.shift-left .robot-image,
+.elektroman-content.shift-left .title,
+.elektroman-content.shift-left .subtitle {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.elektroman-content .title {
+    font-size: 36px;
+    font-weight: 900;
+    color: #FFD700; /* Altın sarısı */
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
+    padding: 10px 20px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.elektroman-content .subtitle {
+    font-size: 20px;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 5px 15px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.elektroman-content .robot-image{    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+/* Detaya basınca içeriği görünür yap */
+.detail-active .elektroman-detail {
+    transform: translateX(-100%);
+}
+
+/* Geri Butonu */
+.elektroman-close-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: white;
+    color: black;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+}
+
+
+
+.page {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: none; /* Başlangıçta sayfaları gizle */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out, transform 0.5s ease-in-out;
+    transform: scale(0.9);
+}
+
+.page.active {
+    display: flex; /* Sadece aktif olan sayfa görünür */
+    opacity: 1;
+    transform: scale(1);
+}
+
+.page.transitioning {
+    clip-path: circle(100% at center);
+    transition: clip-path 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css');
+
+
+.hidden {
+    clip-path: circle(0% at center);
+    opacity: 0;
+}
+
+/* Yumuşak Geçiş */
+@keyframes fadeZoom {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeInSlide {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.indicator {
+    position: relative;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: white;
+    opacity: 0.7;
+    cursor: pointer;
+    transition: opacity 0.3s, transform 0.3s;
+    border: 2px solid #6BC4CA;
+}
+
+.indicator.active {
+    opacity: 1;
+    transform: scale(1.5);
+    background: #6BC4CA;
+    border: 2px solid white;
+}
+
+
+
+.full-screen-works {
+    width: 100vw;
+    height: 100vh;
+    background: #f5f0e8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    font-family: 'Merriweather', serif;
+    position: relative;
+    padding: 60px;
+    box-sizing: border-box;
+}
+
+.full-screen-works h2 {
+    font-size: 64px;
+    margin-bottom: 40px;
+    text-align: left;
+    width: 100%;
+    padding-left: 10%;
+}
+
+.italic-text {
+    font-style: italic;
+    font-weight: normal;
+}
+
+.bold-text {
+    font-weight: bold;
+    color: #c45828;
+}
+
+/* Kartlar için özel sayfa */
+.page#cardsPage {
+    background: #D67242;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card-container {
+    position: relative;
+    width: 350px;
+    height: 500px;
+    perspective: 1000px;
+    overflow: hidden;
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
+    opacity: 1;
+}
+
+.card img {
+    width: 90%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.card-text h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+.card-text p {
+    font-size: 16px;
+    color: #555;
+}
+
+.card-number {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #D67242;
+}
+
+/* Kart aşağı giderken kaybolma efekti */
+.card.exit-down {
+    transform: translateY(100%) scale(0.8);
+    opacity: 0;
+}
+
+/* Kart yukarıdan gelirken görünme efekti */
+.card.enter-up {
+    transform: translateY(-100%) scale(0.8);
+    opacity: 0;
+}
+
+/* Kart aktifse görünür */
+.card.active {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+}
+
+/* Kart Kontrolleri */
+.card-controls {
+    position: absolute;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.control-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: black;
+    color: white;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.card-detail-view {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 80vw;
+    height: 80vh;
+    background: white;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    transform: translate(-50%, -50%) scale(0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.card-detail-view.active {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Kapatma Butonu */
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #A576C5;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+/* Hover Resmi */
+.hover-image {
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    width: 250px;
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+    opacity: 0;
+    pointer-events: none;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.indicator::after {
+    content: "";
+    width: 50px; /* Daha küçük ve dengeli boyut */
+    height: 50px;
+    position: absolute;
+    left: -65px; /* Konumu daha iyi ayarladık */
+    top: -15px;
+    background-size: contain; /* Resmi kırpmadan sığdır */
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%; /* Tam yuvarlak görünüm */
+    border: 2px solid white;
+    display: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Hafif gölge efekti */
+}
+
+/* Hover anında resmi göster */
+.indicator:hover::after {
+    display: block;
+}
+
+/* Homepage Hover */
+.indicator[data-page="homepage"]:hover::after {
+    display: none;
+}
+
+.indicator[data-page="character-intro"]:hover::after {
+    display: none;
+}
+
+/* MetalCan Hover */
+.indicator[data-page="metalcan"]:hover::after {
+    background-image: url('./img/gürgür.png'); 
+}
+
+/* Balca Hover */
+.indicator[data-page="piri"]:hover::after {
+    background-image: url('./img/piri.png'); 
+}
+
+.indicator[data-page="elektroman"]:hover::after {
+    background-image: url('./img/alem.png'); 
+}
+
+.indicator[data-page="arca"]:hover::after {
+    background-image: url('./img/arca.png'); 
+}
+.indicator[data-page="balca2"]:hover::after {
+    background-image: url('./img/balca.png'); 
+}
+.indicator[data-page="zeyrek"]:hover::after {
+    background-image: url('./img/zeyrek.png'); 
+}
+
+.indicator[data-page="goril"]:hover::after {
+    background-image: url('./img/goril.png'); 
+}
+
+        /* Sol Üst Karakter Adı */
+        .header {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 26px;
+            font-weight: 900;
+            color: #2ECC71;
+        }
+
+        /* Robot Görselleri */
+        .robot-image {
+            width: 800px;
+            max-width: 80%;
+            opacity: 0;
+            transform: scale(0.8);
+            animation: fadeZoom 1s ease-in-out forwards;
+        }
+        
+
+        .balca-image {
+            width: 800px;
+            max-width: 80%;
+            opacity: 0;
+            transform: scale(0.8);
+            animation: fadeZoom 1s ease-in-out forwards;
+        }
+
+        .piri-image {
+            width: 800px;
+            max-width: 80%;
+            opacity: 0;
+            transform: scale(0.8);
+            animation: fadeZoom 1s ease-in-out forwards;
+        }
+
+        
+        .elektroman-image {
+            width: 800px;
+            max-width: 80%;
+            opacity: 0;
+            transform: scale(0.8);
+            animation: fadeZoom 1s ease-in-out forwards;
+        }
+
+        .arca-image {
+            width: 800px;
+            max-width: 80%;
+            opacity: 0;
+            transform: scale(0.8);
+            animation: fadeZoom 1s ease-in-out forwards;
+        }
+
+
+
+        /* Başlıklar */
+        .title {
+            font-size: 36px;
+            font-weight: 900;
+            color: #6BC4CA;
+            margin-bottom: 10px;
+            opacity: 0;
+            transform: translateY(-30px);
+            animation: fadeInSlide 1s ease-in-out forwards;
+        }
+
+        .subtitle {
+            font-size: 18px;
+            max-width: 500px;
+            margin-bottom: 20px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInSlide 1s ease-in-out forwards;
+        }
+
+        .page-indicator {
+            position: fixed;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            z-index: 1000; /* EN ÖNE ALDIK */
+            
+            /* Başlangıçta gizle */
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+        }
+        
+
+        .page-indicator div {
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: white;
+            opacity: 0.5;
+            cursor: pointer;
+            transition: 0.3s;
+            border: 2px solid #6BC4CA; /* Daha belirgin hale getirildi */
+        }
+
+        .page-indicator .active {
+            opacity: 1;
+            transform: scale(1.5);
+            background: #6BC4CA;
+            border: 2px solid white;
+        }
+
+        .footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            font-size: 14px;
+            padding: 10px 20px;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+
+
+.footer hr {
+    width: 100%;
+    border: 0;
+    border-top: 1px solid white;
+    margin-bottom: 5px;
+}
+
+.footer-left {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.footer-right {
+    font-size: 14px;
+    color: #FFD700; /* Altın sarısı */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Altında gölge efekti */
+}
+
+/* Modal Açıldığında Alt Çizgiyi Gizle */
+.modal-wrapper.open + .footer {
+    display: none;
+}
+.detail-btn {
+    position: fixed; /* Sayfa kayarken ve modal açılınca sabit kalması için */
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 100px;
+    background: white;
+    color: black;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    border-radius: 0 50px 50px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Modal açıldığında butonu gizle */
+.detail-btn.hidden {
+    opacity: 0;
+    transform: translateX(-50px) translateY(-50%); /* Sola kaydır */
+}
+#homepage .detail-btn {
+    display: none !important;
+}
+
+/* **Sayfa kayınca buton yerinde sabit kalsın** */
+.metalcan-content.shift-left .detail-btn,
+.piri-content.shift-left .detail-btn,
+.elektroman-content.shift-left .detail-btn,
+.ar {
+    left: 0; /* Buton kaymamalı */
+}
+
+.detail-btn:hover {
+    background: #ddd;
+}
+
+/* **Detay Kutusu (Modal) Sağdan Sola Açılmalı** */
+.detail-box {
+    position: fixed;
+    right: -400px; /* Başlangıçta ekran dışında */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 300px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: block; /* Başlangıçta kapalı */
+    opacity: 0;
+    transition: right 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    z-index: 1001;
+}
+
+/* **Açıldığında Sağdan Sola Geçiş Yapsın** */
+.detail-box.active {
+    right: 50px; /* Sağ kenardan biraz içeride olacak */
+    opacity: 1;
+}
+
+
+
+
+        /* Scroll İkonu */
+        .scroll-icon {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    cursor: pointer;
+    animation: bounce 1.5s infinite;
+    color: white;
+}
+
+.scroll-icon:hover {
+    color: #C4A7A3;
+}
+
+
+        .modal-wrapper {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 40%;
+            height: 100%;
+            background: white;
+            text-align: center;
+            transition: right 0.5s ease-in-out;
+            padding: 20px;
+        }
+
+        .modal-wrapper.open {
+            right: 0;
+        }
+
+        .modal-content {
+            color: black;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .robot-image, .title, .subtitle {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+        }
+
+        .page.active .robot-image,
+        .page.active .title,
+        .page.active .subtitle {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        #homepage {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.5); /* Hafif saydam arka plan */
+    backdrop-filter: blur(3px); /* Hafif bulanıklık */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.hidden {
+    clip-path: circle(0% at center);
+    opacity: 0;
+}
+
+
+
+.main-title {
+    font-size: 60px;
+    font-weight: 900;
+    color: #FFD700; /* Altın sarısı */
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8); /* Daha koyu gölge */
+    padding: 10px 20px;
+    background: rgba(0, 0, 0, 0.5); /* Hafif siyah arka plan */
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.main-subtitle {
+    font-size: 20px;
+    color: white;
+    background: rgba(0, 0, 0, 0.5); /* Hafif siyah arka plan */
+    padding: 5px 15px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+
+.explore-btn {
+    padding: 12px 24px;
+    font-size: 18px;
+    border: none;
+    background: #FFD700; /* Altın sarısı */
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.explore-btn:hover {
+    background: #FFC107; /* Daha koyu altın sarısı */
+    transform: scale(1.05);
+}
+
+
+.animated-text {
+    font-size: 60px;
+    font-weight: bold;
+    color: #3a1710; /* Yeni renk: Turuncu */
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    opacity: 0; /* Başlangıçta gizli */
+}
+
+.word {
+    display: inline-block;
+    transform: translateY(50px);
+    opacity: 0;
+}
+
+.space {
+    width: 20px;
+}
+
+/* Yeni Eklenen Sayfa için Tasarım */
+.page.expandable {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #F5F1E7;
+    transition: background-color 1s ease-in-out;
+    z-index: 10;
+}
+
+.expandable img {
+    width: 200px; /* Küçük boyutta başlasın */
+    height: auto;
+    transition: width 1.5s ease-in-out, transform 1.5s ease-in-out, opacity 1.5s ease-in-out;
+}
+
+.expandable.active img {
+    width: 90vw; /* Scroll yaptıkça büyüsün */
+    transform: scale(1);
+}
+
+.expandable .text {
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+}
+
+.expandable.active .text {
+    opacity: 0; /* Scroll ile kaybolsun */
+}
+
+@keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+}
+
+@keyframes fadeInSlide {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeZoom {
+            from { opacity: 0; transform: scale(0.8); }
+            to { opacity: 1; transform: scale(1); }
+}
+
+.transition-overlay {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    clip-path: circle(0% at 50% 50%); /* Tam ortadan başla */
+    z-index: 100;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transform: translate(-50%, -50%); /* Ortalamak için */
+    transition: clip-path 0.2s ease-out; /* Daha smooth */
+}
+
+.transition-overlay.active {
+    clip-path: circle(150% at 50% 50%); /* Tam ekrana yayıl */
+}
+
+.transition-content {
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.robot-detail {
+    display: none; /* Başlangıçta gizli */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    background: white;
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    transition: opacity 0.5s ease-in-out, transform 0.3s ease-in-out;
+    opacity: 0;
+}
+
+.robot-detail.active {
+    display: block;
+    opacity: 1;
+}
+
+.shift-left {
+    transform: translateX(-40%);
+}
+
+#homepage .page-indicator {
+    display: none;
+}
+
+
+
+.alem-content {
+    position: relative; /* Butonu bunun içinde hizalayacağız */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.8s ease-in-out;
+}
+
+        .alem-content.shift-left {
+            transform: translateX(-40%);
+        }
+
+
+        .alem-detail {
+            position: absolute;
+            top: 50%;
+            right: -50%;
+            transform: translateY(-50%);
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            transition: right 0.8s ease-in-out;
+            width: 40%;
+            color: black;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+        }
+
+        .alem-detail.active {
+            right: 5%;
+            opacity: 1;
+        }
+
+/* Animasyon sırasında elemanların kaybolmasını engelle */
+.alem-content.shift-left .elektroman-image,
+.alem-content.shift-left .title,
+.alem-content.shift-left .subtitle {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.alem-content .title {
+    font-size: 36px;
+    font-weight: 900;
+    color: #FFD700; /* Altın sarısı */
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
+    padding: 10px 20px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.alem-content .subtitle {
+    font-size: 20px;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 5px 15px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+
+.alem-content .robot-image{    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+/* Detaya basınca içeriği görünür yap */
+.detail-active .alem-detail {
+    transform: translateX(-100%);
+}
+
+/* Geri Butonu */
+.alem-close-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: white;
+    color: black;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+}
+
+.arca-content {
+    position: relative; /* Butonu bunun içinde hizalayacağız */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.8s ease-in-out;
+}
+
+        .arca-content.shift-left {
+            transform: translateX(-40%);
+        }
+
+
+        .arca-detail {
+            position: absolute;
+            top: 50%;
+            right: -50%;
+            transform: translateY(-50%);
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            transition: right 0.8s ease-in-out;
+            width: 40%;
+            color: black;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+        }
+
+        .arca-detail.active {
+            right: 5%;
+            opacity: 1;
+        }
+
+/* Animasyon sırasında elemanların kaybolmasını engelle */
+.arca-content.shift-left .arca-image,
+.arca-content.shift-left .title,
+.arca-content.shift-left .subtitle {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.arca-content .title {
+    font-size: 36px;
+    font-weight: 900;
+    color: #FFD700; /* Altın sarısı */
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
+    padding: 10px 20px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.arca-content .subtitle {
+    font-size: 20px;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 5px 15px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+
+.arca-content .robot-image{    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+/* Detaya basınca içeriği görünür yap */
+.detail-active .arca-detail {
+    transform: translateX(-100%);
+}
+
+/* Geri Butonu */
+.arca-close-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: white;
+    color: black;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+}
+
+.balca2-content {
+    position: relative; /* Butonu bunun içinde hizalayacağız */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.8s ease-in-out;
+}
+
+        .balca2-content.shift-left {
+            transform: translateX(-40%);
+        }
+
+
+        .balca2-detail {
+            position: absolute;
+            top: 50%;
+            right: -50%;
+            transform: translateY(-50%);
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            transition: right 0.8s ease-in-out;
+            width: 40%;
+            color: black;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+        }
+
+        .balca2-detail.active {
+            right: 5%;
+            opacity: 1;
+        }
+
+/* Animasyon sırasında elemanların kaybolmasını engelle */
+.balca2-content.shift-left .balca2-image,
+.balca2-content.shift-left .title,
+.balca2-content.shift-left .subtitle {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.balca2-content .title {
+    font-size: 36px;
+    font-weight: 900;
+    color: #FFD700; /* Altın sarısı */
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
+    padding: 10px 20px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.balca2-content .subtitle {
+    font-size: 20px;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 5px 15px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+
+.balca2-content .robot-image{    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+/* Detaya basınca içeriği görünür yap */
+.detail-active .balca2-detail {
+    transform: translateX(-100%);
+}
+
+/* Geri Butonu */
+.balca2-close-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: white;
+    color: black;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+}
+
+
+.zeyrek-content {
+    position: relative; /* Butonu bunun içinde hizalayacağız */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.8s ease-in-out;
+}
+
+        .zeyrek-content.shift-left {
+            transform: translateX(-40%);
+        }
+
+
+        .zeyrek-detail {
+            position: absolute;
+            top: 50%;
+            right: -50%;
+            transform: translateY(-50%);
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            transition: right 0.8s ease-in-out;
+            width: 40%;
+            color: black;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+        }
+
+        .zeyrek-detail.active {
+            right: 5%;
+            opacity: 1;
+        }
+
+/* Animasyon sırasında elemanların kaybolmasını engelle */
+.zeyrek-content.shift-left .zeyrek-image,
+.zeyrek-content.shift-left .title,
+.zeyrek-content.shift-left .subtitle {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.zeyrek-content .title {
+    font-size: 36px;
+    font-weight: 900;
+    color: #FFD700; /* Altın sarısı */
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
+    padding: 10px 20px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.zeyrek-content .subtitle {
+    font-size: 20px;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 5px 15px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+
+.zeyrek-content .robot-image{    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+/* Detaya basınca içeriği görünür yap */
+.detail-active .zeyrek-detail {
+    transform: translateX(-100%);
+}
+
+/* Geri Butonu */
+.zeyrek-close-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: white;
+    color: black;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+}
+
+.goril-content {
+    position: relative; /* Butonu bunun içinde hizalayacağız */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.8s ease-in-out;
+}
+
+        .goril-content.shift-left {
+            transform: translateX(-40%);
+        }
+
+
+        .goril-detail {
+            position: absolute;
+            top: 50%;
+            right: -50%;
+            transform: translateY(-50%);
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            width: 40%;
+            color: #333;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            transition: right 0.8s ease-in-out, opacity 0.5s ease-in-out;
+            opacity: 0;
+            display: none;
+        }
+        
+        /* Aktif hale geldiğinde modalı görünür yap */
+        .goril-detail.active {
+            right: 5%;
+            opacity: 1;
+            display: block;
+        }
+        
+        /* Modal Başlık */
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+        
+        .modal-header h2 {
+            font-size: 22px;
+            font-weight: bold;
+            color: #333;
+        }
+        
+        /* Kapatma Butonu */
+        .close-btn {
+            font-size: 22px;
+            cursor: pointer;
+            color: #777;
+            transition: color 0.3s ease-in-out;
+        }
+        
+        .close-btn:hover {
+            color: #d9534f;
+        }
+        
+        /* İçerik */
+        .modal-body {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #444;
+            text-align: justify;
+        }
+        
+        /* Vurgu için özel kutu */
+        .highlight-box {
+            background: #f5f5f5;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 15px 0;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .highlight-box p {
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        
+        .highlight-box ul {
+            padding-left: 20px;
+            list-style: disc;
+        }
+        
+        /* Bilgi Paragrafı */
+        .info {
+            font-size: 15px;
+            font-style: italic;
+            color: #666;
+        }
+        
+        .goril-detail.active {
+            right: 5%;
+            opacity: 1;
+        }
+
+/* Animasyon sırasında elemanların kaybolmasını engelle */
+.goril-content.shift-left .goril-image,
+.goril-content.shift-left .title,
+.goril-content.shift-left .subtitle {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.goril-content .title {
+    font-size: 36px;
+    font-weight: 900;
+    color: #FFD700; /* Altın sarısı */
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
+    padding: 10px 20px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.goril-content .subtitle {
+    font-size: 20px;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 5px 15px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+
+.goril-content .robot-image{    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+/* Detaya basınca içeriği görünür yap */
+.detail-active .goril-detail {
+    transform: translateX(-100%);
+}
+
+/* Geri Butonu */
+.goril-close-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: white;
+    color: black;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+}
+
+
+/* Karanlık Katman */
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+
+.homepage-title {
+    font-size: 60px;
+    font-weight: 900;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
+}
+
+.homepage-subtitle {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+/* Buton */
+.explore-btn {
+    padding: 12px 24px;
+    font-size: 18px;
+    border: none;
+    background: #FFD700;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+}
+
+.explore-btn:hover {
+    background: #FFC107;
+    transform: scale(1.05);
+}
+
+/* Scroll İkonu */
+.scroll-icon {
+    position: absolute;
+    bottom: 20px;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    animation: bounce 1.5s infinite;
+}
+
+/* Sayfa Kartları */
+.page {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: white;
+}
+
+/* Bilgilendirme Kartları */
+.info-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 50px 10%;
+}
+
+.info-card {
+    background: white;
+    color: black;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    width: 30%;
+    text-align: center;
+    transform: translateY(50px);
+    opacity: 0;
+    transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
+}
+
+.info-card h2 {
+    color: #2ECC71;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.info-card p {
+    font-size: 16px;
+    color: #555;
+}
+
+.info-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Kartları Görünür Yap */
+.info-card.visible {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Bounce Animasyonu */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .info-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .info-card {
+        width: 80%;
+    }
+}
+
+.animated-text {
+    opacity: 0; /* Başlangıçta görünmez */
+    transform: translateY(30px); /* Yazının aşağıdan gelmesi */
+}
+
+
+
+/* 📌 Video küçülecek */
+.video-shrink {
+    height: 80vh; /* %80 olacak */
+}
+
+.character-intro-container {
+    position: relative;
+    max-width: 1200px;
+    margin: auto;
+    padding: 50px 20px;
+}
+
+/* Unique Title */
+#character-intro-title {
+    font-size: 48px;
+    font-weight: 600;
+    color: #FF9800;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 1s ease-in, transform 1s ease-in;
+}
+
+#character-intro-title.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Unique Subtitle */
+#character-intro-description {
+    font-size: 22px;
+    color: #333;
+    max-width: 80%;
+    margin: 20px auto;
+    line-height: 1.6;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1.2s ease-in, transform 1.2s ease-in;
+}
+
+#character-intro-description.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Character Box */
+.character-intro-box {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+/* Unique Character Image */
+.character-intro-img {
+    width: 150px;
+    height: auto;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.character-intro-img.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Unique Highlighted Text */
+.character-intro-highlight {
+    font-weight: bold;
+    color: #E44D26;
+}
+
+.background-video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1; /* arka plana yerleşmesini sağlar */
+}
+
+.background-video {
+    width: 100vw;
+    height: 56.25vw; /* 16:9 oranı için */
+    min-height: 100vh;
+    min-width: 177.77vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+/* 📌 Video küçüldüğünde %80 olacak */
+.background-video.shrink {
+    height: 80vh;
+}
+
+/* 📌 Ana içerik ortada */
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 10;
+}
+
+/* 📌 Sayfanın tamamını kaplayan bir overlay */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+/* 📌 Scroll butonu */
+.scroll-icon {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    z-index: 10;
+}
+
+/* 📌 Misyon kısmı başlangıçta görünmez */
+#mission {
+    width: 100%;
+    height: 20vh;
+    background: white;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* 📌 Misyon görünür olunca */
+#mission.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* 📌 Misyon içeriği */
+.mission-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* 📌 Misyon kutuları */
+.mission-box {
+    width: 200px;
+    padding: 20px;
+    background: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+/* 📌 Hover efekti */
+.mission-box:hover {
+    transform: scale(1.05);
+}
