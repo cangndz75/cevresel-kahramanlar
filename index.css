@@ -1,15 +1,4 @@
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Montserrat', sans-serif;
-    color: white;
-    text-align: center;
-    overflow: hidden;
-    height: 100vh;
-    background-size: cover;
-    background-color: rgba(255, 255, 255, 0.7); 
-    backdrop-filter: blur(5px);
-}
+
 
 
         .container {
@@ -445,34 +434,6 @@ body {
 
 
 
-.page {
-    position: absolute;
-    width: 100%;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    display: none; /* Başlangıçta sayfaları gizle */
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    transition: opacity 1s ease-in-out, transform 0.5s ease-in-out;
-    transform: scale(0.9);
-}
-
-.page.active {
-    display: flex; /* Sadece aktif olan sayfa görünür */
-    opacity: 1;
-    transform: scale(1);
-}
-
-.page.transitioning {
-    clip-path: circle(100% at center);
-    transition: clip-path 1s ease-in-out, opacity 1s ease-in-out;
-}
-
-
-
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css');
 
 
@@ -836,21 +797,7 @@ body {
             animation: fadeInSlide 1s ease-in-out forwards;
         }
 
-        .page-indicator {
-            position: fixed;
-            top: 50%;
-            right: 20px;
-            transform: translateY(-50%);
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            z-index: 1000; /* EN ÖNE ALDIK */
-            
-            /* Başlangıçta gizle */
-            opacity: 0;
-            visibility: hidden;
-            transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
-        }
+
         
 
         .page-indicator div {
@@ -980,24 +927,6 @@ body {
 
 
 
-
-        /* Scroll İkonu */
-        .scroll-icon {
-    position: absolute;
-    bottom: 40px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 24px;
-    cursor: pointer;
-    animation: bounce 1.5s infinite;
-    color: white;
-}
-
-.scroll-icon:hover {
-    color: #C4A7A3;
-}
-
-
         .modal-wrapper {
             position: fixed;
             top: 0;
@@ -1039,19 +968,6 @@ body {
             transform: translateY(0);
         }
 
-        #homepage {
-    position: absolute;
-    width: 100%;
-    height: 100vh;
-    background: rgba(255, 255, 255, 0.5); /* Hafif saydam arka plan */
-    backdrop-filter: blur(3px); /* Hafif bulanıklık */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-}
-
 
 .hidden {
     clip-path: circle(0% at center);
@@ -1080,24 +996,6 @@ body {
     display: inline-block;
 }
 
-
-.explore-btn {
-    padding: 12px 24px;
-    font-size: 18px;
-    border: none;
-    background: #FFD700; /* Altın sarısı */
-    color: black;
-    font-weight: bold;
-    cursor: pointer;
-    border-radius: 8px;
-    transition: background 0.3s ease-in-out, transform 0.2s;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-}
-
-.explore-btn:hover {
-    background: #FFC107; /* Daha koyu altın sarısı */
-    transform: scale(1.05);
-}
 
 
 .animated-text {
@@ -1174,39 +1072,6 @@ body {
 @keyframes fadeZoom {
             from { opacity: 0; transform: scale(0.8); }
             to { opacity: 1; transform: scale(1); }
-}
-
-.transition-overlay {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    width: 100vw;
-    height: 100vh;
-    background-color: white;
-    clip-path: circle(0% at 50% 50%); /* Tam ortadan başla */
-    z-index: 100;
-    pointer-events: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    transform: translate(-50%, -50%); /* Ortalamak için */
-    transition: clip-path 0.2s ease-out; /* Daha smooth */
-}
-
-.transition-overlay.active {
-    clip-path: circle(150% at 50% 50%); /* Tam ekrana yayıl */
-}
-
-.transition-content {
-    width: 100vw;
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
 }
 
 .robot-detail {
@@ -1748,44 +1613,7 @@ body {
     margin-bottom: 20px;
 }
 
-/* Buton */
-.explore-btn {
-    padding: 12px 24px;
-    font-size: 18px;
-    border: none;
-    background: #FFD700;
-    color: black;
-    font-weight: bold;
-    cursor: pointer;
-    border-radius: 8px;
-    transition: background 0.3s ease-in-out, transform 0.2s;
-}
 
-.explore-btn:hover {
-    background: #FFC107;
-    transform: scale(1.05);
-}
-
-/* Scroll İkonu */
-.scroll-icon {
-    position: absolute;
-    bottom: 20px;
-    font-size: 24px;
-    color: white;
-    cursor: pointer;
-    animation: bounce 1.5s infinite;
-}
-
-/* Sayfa Kartları */
-.page {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background: white;
-}
 
 /* Bilgilendirme Kartları */
 .info-container {
@@ -1959,39 +1787,7 @@ body {
     height: 80vh;
 }
 
-/* 📌 Ana içerik ortada */
-.content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: white;
-    z-index: 10;
-}
 
-/* 📌 Sayfanın tamamını kaplayan bir overlay */
-.overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.4);
-    z-index: 1;
-}
-
-/* 📌 Scroll butonu */
-.scroll-icon {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 24px;
-    color: white;
-    cursor: pointer;
-    z-index: 10;
-}
 
 /* 📌 Misyon kısmı başlangıçta görünmez */
 #mission {
@@ -2037,6 +1833,186 @@ body {
     transform: scale(1.05);
 }
 
+/* Genel Body Ayarları */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+    height: 100vh;
+    background-size: cover;
+    background-color: rgba(255, 255, 255, 0.7); 
+    backdrop-filter: blur(5px);
+}
+
+/* Sayfa Genel Ayarları (Birleştirildi) */
+.page {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: none; /* Başlangıçta gizli */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 1s ease-in-out, transform 0.5s ease-in-out;
+    overflow: hidden;
+    background: white;
+}
+
+.page.active {
+    display: flex; /* Aktif sayfa görünür */
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Transition Overlay */
+.transition-overlay {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    clip-path: circle(0% at 50% 50%);
+    z-index: 100;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transform: translate(-50%, -50%);
+    transition: clip-path 0.2s ease-out;
+}
+
+.transition-overlay.active {
+    clip-path: circle(150% at 50% 50%);
+}
+
+/* Ana İçerik */
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 10;
+    width: 90%;
+    padding: 0 10px;
+}
+
+/* Overlay Arka Planı */
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* Başlık Stilleri */
+.homepage-title {
+    font-size: 60px;
+    font-weight: 900;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
+    margin-bottom: 15px;
+}
+
+.homepage-subtitle {
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+/* Keşfet Butonu */
+.explore-btn {
+    padding: 12px 24px;
+    font-size: 18px;
+    border: none;
+    background: #FFD700;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+}
+
+.explore-btn:hover {
+    background: #FFC107;
+    transform: scale(1.05);
+}
+
+/* Scroll İkonu */
+.scroll-icon {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    animation: bounce 1.5s infinite;
+    z-index: 10;
+}
+
+/* Background Video Container */
+.background-video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.background-video {
+    width: 100vw;
+    height: 56.25vw; /* 16:9 Aspect Ratio */
+    min-height: 100vh;
+    min-width: 177.77vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+/* Mission Section */
+#mission {
+    width: 100%;
+    padding: 30px 20px;
+    background: white;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    color: black;
+}
+
+#mission.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.mission-title {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.mission-text {
+    font-size: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* 📱 Mobil Uyumluluk */
 @media (max-width: 768px) {
     .homepage-title {
         font-size: 2.5rem;
@@ -2057,10 +2033,6 @@ body {
         transform: translate(-50%, -50%) scale(1.8);
     }
 
-    #mission {
-        padding: 15px;
-    }
-
     .mission-title {
         font-size: 1.8rem;
     }
@@ -2068,4 +2040,44 @@ body {
     .mission-text {
         font-size: 0.9rem;
     }
+}
+
+/* 🔧 Mobilde Scroll Çalışma Sorunu İçin */
+html, body {
+    -webkit-overflow-scrolling: touch;
+    overflow-y: auto !important;
+}
+
+body {
+    touch-action: manipulation;
+}
+
+/* 📌 Ekstra mobil iyileştirmeleri */
+.page-indicator {
+    display: none; /* Mobilde görünmeyecek şekilde */
+}
+
+.detail-btn {
+    display: none; /* Mobilde detay butonu gizli */
+}
+
+/* 📌 Görseldeki gibi boşluk bırakmamak için eklenen CSS */
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.page {
+    padding: 0;
+    margin: 0;
+}
+
+.background-video-container iframe {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
 }
