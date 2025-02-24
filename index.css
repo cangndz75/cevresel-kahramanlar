@@ -2093,13 +2093,10 @@ body {
     }
     .background-video-container iframe,
     .background-video {
-      width: 100%;
-      height: 100%;
-      object-fit: cover; 
-      position: absolute;
-      top: 0;
-      left: 0;
-      transform: translate(0, 0); /* scale(1) ile bozulmayı önle */
+        width: 100vw !important;
+        height: 100vh !important;
+        object-fit: cover;
+        transform: translate(-50%, -50%) scale(1); /* Gerekirse scale(1.8) azalt */
     }
   
     /* Sayfalar tam ekran, kaydırmasız */
@@ -2135,49 +2132,55 @@ body {
       width: 100px; /* Görselleri mobilde küçült */
     }
   
-    /* Detay butonu (sol alt) */
     .detail-btn {
-      display: flex !important;
-      position: fixed;
-      bottom: 20px;
-      left: 20px;
-      top: auto !important;
-      transform: none !important;
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      writing-mode: horizontal-tb;
-      text-orientation: initial;
-      font-size: 12px;
-      justify-content: center;
-      align-items: center;
-      background: #fff;
-      color: #000;
-      box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
-      z-index: 1000;
+        display: flex !important;
+        position: fixed !important;
+        bottom: 15px !important; /* sayfanın altına 15px yukarıdan */
+        left: 15px !important;   /* soldan 15px içeride */
+        width: auto !important;
+        height: auto !important;
+        padding: 8px 16px !important; 
+        font-size: 14px !important;
+        writing-mode: horizontal-tb !important;
+        text-orientation: initial !important;
+        border-radius: 8px !important; 
+        background: white !important;
+        color: black !important;
+        box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+        z-index: 2000; /* Modal’ın altında kalmaması için yüksek z-index */
+    }
+
+    .title {
+        margin-top: 10px !important; /* Yukarıdan biraz boşluk */
+        position: relative;          /* Gerekirse position absolute verilebilir */
+        font-size: 1.5rem !important;/* Mobilde biraz küçültebilirsin */
+    }
+    .subtitle {
+        margin-top: 5px !important;
+        font-size: 1rem !important;  /* Mobilde altyazı boyutu */
+        max-width: 90%;
     }
   
-    /* Footer (sağ alt) */
     .footer {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      left: auto;
-      width: auto;
-      padding: 8px 12px;
-      background: rgba(0, 0, 0, 0.4);
-      border-radius: 8px;
-      box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
-      font-size: 0.9rem;
-      justify-content: center !important; 
-      align-items: center;
-      margin: 0 !important;
+        position: fixed !important;
+        bottom: 15px !important;
+        right: 15px !important;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        background: rgba(0,0,0,0.4);
+        padding: 6px 12px;
+        border-radius: 8px;
+        z-index: 2000;
     }
+    .footer hr {
+        display: none !important;
+    }
+    
     .footer-right {
-      margin: 0 !important;
+        margin: 0 !important;
     }
   
-    /* Modal (Detay) açıldığında arkadaki footer ve butonu gizle */
     .modal-open .footer,
     .modal-open .detail-btn,
     .modal-open .page-indicator {
@@ -2192,18 +2195,19 @@ body {
     .balca2-detail,
     .zeyrek-detail,
     .goril-detail {
-      position: fixed !important;
-      top: 50% !important;
-      left: 50% !important;
-      transform: translate(-50%, -50%) !important;
-      width: 90% !important;
-      max-width: 400px;
-      max-height: 80vh;
-      overflow-y: auto;
-      border-radius: 10px;
-      display: none;
-      opacity: 0;
-      z-index: 9999;
+        position: fixed !important;
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        width: 90% !important;
+        max-width: 400px !important;
+        height: auto !important;
+        max-height: 80vh !important;
+        overflow-y: auto !important;
+        border-radius: 10px !important;
+        display: none;
+        opacity: 0;
+        z-index: 9999;
     }
     .metalcan-detail.active,
     .piri-detail.active,
@@ -2216,7 +2220,6 @@ body {
       opacity: 1;
     }
   
-    /* Shift-left efektini mobilde iptal (sayfa kaymasın) */
     .metalcan-content.shift-left,
     .piri-content.shift-left,
     .elektroman-content.shift-left,
@@ -2228,7 +2231,6 @@ body {
       transform: none !important;
     }
   
-    /* Page-indicator mobilde görünür olsun */
     .page-indicator {
       display: flex !important;
       opacity: 1 !important;
@@ -2241,3 +2243,24 @@ body {
     }
   }
   
+  @media (max-width: 768px) {
+    #homepage.page.active ~ .page-indicator {
+      display: none !important;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .detail-btn {
+      padding: 6px 12px !important;
+      font-size: 10px !important;
+      bottom: 10px !important;
+      left: 10px !important;
+    }
+    
+    .footer {
+      padding: 4px 8px !important;
+      font-size: 0.8rem !important;
+      bottom: 10px !important;
+      right: 10px !important;
+    }
+  }
