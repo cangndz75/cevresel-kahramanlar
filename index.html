@@ -847,6 +847,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     observer.observe(document.querySelector('.character-intro-container'));
 });
+</script>
+<script>
+    function scrollToMission() {
+    document.getElementById('mission').scrollIntoView({ behavior: 'smooth' });
+    document.getElementById('mission').classList.remove('hidden');
+}
 
 </script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>

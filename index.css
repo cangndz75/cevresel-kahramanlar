@@ -7,8 +7,8 @@ body {
     overflow: hidden;
     height: 100vh;
     background-size: cover;
-    background-color: rgba(255, 255, 255, 0.7); /* Saydamlık efekti */
-    backdrop-filter: blur(5px); /* Hafif bulanıklık efekti */
+    background-color: rgba(255, 255, 255, 0.7); 
+    backdrop-filter: blur(5px);
 }
 
 
@@ -2035,4 +2035,37 @@ body {
 /* 📌 Hover efekti */
 .mission-box:hover {
     transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .homepage-title {
+        font-size: 2.5rem;
+    }
+
+    .homepage-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .explore-btn {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+
+    .background-video {
+        width: auto;
+        height: 100vh;
+        transform: translate(-50%, -50%) scale(1.8);
+    }
+
+    #mission {
+        padding: 15px;
+    }
+
+    .mission-title {
+        font-size: 1.8rem;
+    }
+
+    .mission-text {
+        font-size: 0.9rem;
+    }
 }
