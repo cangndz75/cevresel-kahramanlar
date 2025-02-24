@@ -2071,95 +2071,122 @@ body {
 }
 
 @media (max-width: 768px) {
-    /* Prevent page scrolling: both x and y */
+    /* Body ve HTML tam ekran, kaydırma engelli */
     html, body {
-      overflow: hidden;
-      width: 100%;
-      height: 100%;
       margin: 0;
       padding: 0;
-    }
-  
-    /* Each page occupies the full viewport without scrolling */
-    .page {
-      position: relative;
       width: 100%;
       height: 100%;
-      overflow: hidden;
+      overflow: hidden; /* Tüm scroll'u kapatıyoruz */
+      -webkit-overflow-scrolling: touch; 
+      touch-action: manipulation;
     }
   
-    /* Background video fills screen (no offset transform) */
+    /* Arka plan videosu tam ekran, bozulmadan görünür */
+    .background-video-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden; 
+    }
     .background-video-container iframe,
     .background-video {
-      width: 100% !important;
-      height: 100% !important;
-      object-fit: cover;
-      transform: none !important;
+      width: 100%;
+      height: 100%;
+      object-fit: cover; 
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translate(0, 0); /* scale(1) ile bozulmayı önle */
     }
   
-    /* Remove shift-left transforms on mobile so content doesn't half-hide */
-    .metalcan-content.shift-left,
-    .piri-content.shift-left,
-    .elektroman-content.shift-left,
-    .alem-content.shift-left,
-    .arca-content.shift-left,
-    .balca2-content.shift-left,
-    .zeyrek-content.shift-left,
-    .goril-content.shift-left {
-      transform: none !important;
+    /* Sayfalar tam ekran, kaydırmasız */
+    .page {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden; /* Sayfa içi scroll kapalı */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
   
-    /* Show the detail button near bottom-left (circular) */
+    /* 2. sayfa vb. metinli kısımlarda fontları küçültüp ekrana sığdırma */
+    #character-intro-title {
+      font-size: 1.6rem; /* Mobilde biraz küçülttük */
+    }
+    #character-intro-description {
+      font-size: 0.95rem;
+      line-height: 1.4;
+      max-width: 90%; /* Daha dar tutabiliriz */
+      margin: 10px auto;
+    }
+    .character-intro-box {
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+    }
+    .character-intro-img {
+      width: 100px; /* Görselleri mobilde küçült */
+    }
+  
+    /* Detay butonu (sol alt) */
     .detail-btn {
-      display: block !important;
-      position: fixed !important;
-      bottom: 80px; /* adjust as needed */
-      left: 20px;   /* adjust as needed */
+      display: flex !important;
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      top: auto !important;
+      transform: none !important;
       width: 50px;
       height: 50px;
       border-radius: 50%;
       writing-mode: horizontal-tb;
       text-orientation: initial;
-      transform: none !important;
       font-size: 12px;
       justify-content: center;
       align-items: center;
-      box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
       background: #fff;
       color: #000;
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
       z-index: 1000;
     }
   
-    /* Footer pinned to bottom, always visible unless modal is open */
+    /* Footer (sağ alt) */
     .footer {
-      position: fixed !important;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      display: flex !important;
-      justify-content: center !important;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      left: auto;
+      width: auto;
+      padding: 8px 12px;
+      background: rgba(0, 0, 0, 0.4);
+      border-radius: 8px;
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+      font-size: 0.9rem;
+      justify-content: center !important; 
       align-items: center;
-      z-index: 1000;
+      margin: 0 !important;
+    }
+    .footer-right {
+      margin: 0 !important;
     }
   
-    /* The page indicator on the right-center */
-    .page-indicator {
-      display: flex !important;
-      opacity: 1 !important;
-      visibility: visible !important;
-      position: fixed !important;
-      top: 50%;
-      right: 15px; /* or 20px, as you prefer */
-      transform: translateY(-50%);
-      flex-direction: column;
-      gap: 10px;
-      z-index: 1000;
+    /* Modal (Detay) açıldığında arkadaki footer ve butonu gizle */
+    .modal-open .footer,
+    .modal-open .detail-btn,
+    .modal-open .page-indicator {
+      display: none !important;
     }
   
-    /* Modal / detail content pinned in center, scrollable if needed */
+    /* Modal (Detay) tam ortada, kendi içinde kaydırmalı */
     .metalcan-detail,
     .piri-detail,
-    .elektroman-detail,
     .alem-detail,
     .arca-detail,
     .balca2-detail,
@@ -2172,17 +2199,14 @@ body {
       width: 90% !important;
       max-width: 400px;
       max-height: 80vh;
-      overflow-y: auto; /* Only modal scrolls if content is too tall */
-      right: auto !important;
+      overflow-y: auto;
       border-radius: 10px;
-      display: none; /* Start hidden */
+      display: none;
       opacity: 0;
       z-index: 9999;
     }
-  
     .metalcan-detail.active,
     .piri-detail.active,
-    .elektroman-detail.active,
     .alem-detail.active,
     .arca-detail.active,
     .balca2-detail.active,
@@ -2192,27 +2216,28 @@ body {
       opacity: 1;
     }
   
-    /* Hide footer, detail button, and indicator while a modal is open */
-    .modal-open .footer,
-    .modal-open .detail-btn,
-    .modal-open .page-indicator {
-      display: none !important;
+    /* Shift-left efektini mobilde iptal (sayfa kaymasın) */
+    .metalcan-content.shift-left,
+    .piri-content.shift-left,
+    .elektroman-content.shift-left,
+    .alem-content.shift-left,
+    .arca-content.shift-left,
+    .balca2-content.shift-left,
+    .zeyrek-content.shift-left,
+    .goril-content.shift-left {
+      transform: none !important;
     }
   
-    /* Tweak the character intro container on mobile */
-    .character-intro-container {
-      padding: 20px 15px;
-      max-width: 600px;
-      margin: 0 auto;
-    }
-    #character-intro-title {
-      font-size: 1.6rem;
-    }
-    #character-intro-description {
-      font-size: 0.95rem;
-      line-height: 1.4;
-      max-height: calc(100vh - 200px);
-      overflow-y: auto;
+    /* Page-indicator mobilde görünür olsun */
+    .page-indicator {
+      display: flex !important;
+      opacity: 1 !important;
+      visibility: visible !important;
+      top: 50%;
+      right: 10px;
+      transform: translateY(-50%);
+      flex-direction: column;
+      gap: 8px;
     }
   }
   
