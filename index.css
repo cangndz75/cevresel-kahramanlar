@@ -2052,10 +2052,6 @@ body {
     touch-action: manipulation;
 }
 
-/* 📌 Ekstra mobil iyileştirmeleri */
-.page-indicator {
-    display: none; /* Mobilde görünmeyecek şekilde */
-}
 
 .detail-btn {
     display: none; /* Mobilde detay butonu gizli */
@@ -2081,3 +2077,114 @@ html, body {
     height: 100vh;
     object-fit: cover;
 }
+
+
+@media (max-width: 768px) {
+    .character-intro-container {
+      padding: 20px 15px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+  
+    #character-intro-title {
+      font-size: 1.8rem; 
+    }
+  
+    #character-intro-description {
+      font-size: 1rem;
+      max-width: 95%;
+      margin: 15px auto;
+      line-height: 1.4;
+    }
+  
+    .character-intro-box {
+      flex-wrap: wrap;  
+      gap: 15px;
+      justify-content: center;
+    }
+  
+    .character-intro-img {
+      width: 100px;   
+    }
+  }
+  
+  @media (max-width: 768px) {
+    /* Shift-left efektini mobilde kaldırmak için: */
+    .metalcan-content.shift-left,
+    .goril-content.shift-left,
+    .piri-content.shift-left,
+    .alem-content.shift-left,
+    .arca-content.shift-left,
+    .balca2-content.shift-left,
+    .zeyrek-content.shift-left {
+      transform: none !important;
+    }
+  
+    .metalcan-detail,
+    .goril-detail,
+    .piri-detail,
+    .alem-detail,
+    .arca-detail,
+    .balca2-detail,
+    .zeyrek-detail {
+      position: fixed !important;
+      top: 50% !important;
+      left: 50% !important;
+      transform: translate(-50%, -50%) !important;
+      width: 90% !important;
+      max-width: 400px;
+      height: auto;
+      right: auto !important;
+      border-radius: 10px;
+      display: none;
+      opacity: 0;
+    }
+  
+    .metalcan-detail.active,
+    .goril-detail.active,
+    .piri-detail.active,
+    .alem-detail.active,
+    .arca-detail.active,
+    .balca2-detail.active,
+    .zeyrek-detail.active {
+      display: block;
+      opacity: 1;
+    }
+  }
+  
+  .footer {
+    justify-content: center !important;
+  }
+  .footer-right {
+    margin: 0 !important;
+  }
+  
+  @media (max-width: 768px) {
+    .detail-btn {
+      display: flex !important;
+      width: 50px;
+      height: 50px;
+      bottom: 20px;        
+      left: 20px;          
+      top: auto !important;
+      transform: none !important;
+      border-radius: 50%;
+      writing-mode: horizontal-tb;
+      text-orientation: initial;
+      justify-content: center;
+      align-items: center;
+      font-size: 12px;
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+      background: #fff;
+      color: #000;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .page-indicator {
+      display: flex !important;
+      opacity: 1 !important;
+      visibility: visible !important;
+    }
+  }
+  
