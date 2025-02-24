@@ -2131,23 +2131,7 @@ body {
     .character-intro-img {
       width: 100px;
     }
-  
-    .detail-btn {
-        position: fixed !important;
-        bottom: 15px !important;
-        left: 15px !important;
-        width: auto !important;
-        height: auto !important;
-        padding: 8px 16px !important;
-        font-size: 14px !important;
-        border-radius: 8px !important;
-        background: #fff !important;
-        color: #000 !important;
-        box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
-        z-index: 2000;
-        transform: translateY(0);
-        opacity: 1;
-    }
+
 
     .detail-btn.show {
         transform: translateY(0);
@@ -2279,6 +2263,78 @@ body {
         right: 10px;
       }
   }
+
+/* 1) 992px altı (tablet ve küçük laptop) */
+@media (max-width: 992px) {
+    .detail-btn {
+      position: fixed !important;
+      bottom: 20px !important;
+      left: 20px !important;
+      width: auto !important;
+      height: auto !important;
+      padding: 10px 20px !important;
+      font-size: 15px !important;
+      border-radius: 8px !important;
+      background: #fff !important;
+      color: #000 !important;
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+      writing-mode: horizontal-tb !important; 
+      text-orientation: initial !important;    
+      transform: none !important;
+      opacity: 1 !important;
+      display: flex !important;
+      align-items: center;
+      justify-content: center;
+      z-index: 2000;
+    }
+  }
+  
+  /* 2) 768px altı (küçük tablet ve telefonlar) */
+  @media (max-width: 768px) {
+    .detail-btn {
+      position: fixed !important;
+      bottom: 15px !important;
+      left: 15px !important;
+      padding: 8px 16px !important;
+      font-size: 14px !important;
+      border-radius: 8px !important;
+      background: #fff !important;
+      color: #000 !important;
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+      writing-mode: horizontal-tb !important;
+      text-orientation: initial !important;
+      transform: none !important;
+      opacity: 1 !important;
+      display: flex !important;
+      align-items: center;
+      justify-content: center;
+      z-index: 2000;
+    }
+  }
+  
+  /* 3) 480px altı (daha küçük telefonlar) */
+  @media (max-width: 480px) {
+    .detail-btn {
+      position: fixed !important;
+      bottom: 10px !important;
+      left: 10px !important;
+      padding: 6px 12px !important;
+      font-size: 12px !important;
+      border-radius: 6px !important;
+      background: #fff !important;
+      color: #000 !important;
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+      writing-mode: horizontal-tb !important;
+      text-orientation: initial !important;
+      transform: none !important;
+      opacity: 1 !important;
+      display: flex !important;
+      align-items: center;
+      justify-content: center;
+      z-index: 2000;
+    }
+  }
+  
   
   @media (max-width: 768px) {
     #homepage.page.active ~ .page-indicator {
