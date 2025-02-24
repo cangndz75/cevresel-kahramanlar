@@ -2129,7 +2129,7 @@ body {
       justify-content: center;
     }
     .character-intro-img {
-      width: 100px; /* Görselleri mobilde küçült */
+      width: 100px;
     }
   
     .detail-btn {
@@ -2145,9 +2145,8 @@ body {
         color: #000 !important;
         box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
         z-index: 2000;
-        transform: translateY(50px);
-        opacity: 0;
-        transition: transform 0.3s ease, opacity 0.3s ease;
+        transform: translateY(0);
+        opacity: 1;
     }
 
     .detail-btn.show {
@@ -2156,32 +2155,32 @@ body {
     }
 
     .title {
+        margin-top: 20px !important; /* Daha yukarı */
+        font-size: 1.5rem !important;/* Mobilde boyut */
+      }
+      .subtitle {
         margin-top: 10px !important;
-        position: relative;
-        font-size: 1.5rem !important;
-    }
-    .subtitle {
-        margin-top: 5px !important;
         font-size: 1rem !important;
-        max-width: 90%;
-    }
+        max-width: 90% !important;
+      }
   
-    .footer {
+      .footer {
         position: fixed !important;
         bottom: 15px !important;
         right: 15px !important;
         display: flex !important;
         align-items: center;
         justify-content: center;
-        background: rgba(0,0,0,0.4);
-        padding: 6px 12px;
-        border-radius: 8px;
-        z-index: 2000;
-        font-size: 14px;
+        background: rgba(0,0,0,0.4) !important;
+        padding: 6px 12px !important;
+        border-radius: 8px !important;
+        z-index: 2000 !important;
+        font-size: 14px !important;
       }
       .footer hr {
         display: none !important;
       }
+    
     
     .footer-right {
         margin: 0 !important;
@@ -2206,14 +2205,14 @@ body {
         transform: translate(-50%, -50%) !important;
         width: 90% !important;
         max-width: 400px !important;
-        max-height: 80vh !important; 
+        max-height: 80vh !important;
         overflow-y: auto !important;
         border-radius: 10px !important;
         display: none;
         opacity: 0;
-        z-index: 9999; 
-        background: #fff; 
-        color: #000; 
+        z-index: 9999;
+        background: #fff !important; /* Modal arka planı */
+        color: #000 !important;      /* Metin rengi */
     }
     .metalcan-detail.active,
     .piri-detail.active,
@@ -2225,13 +2224,6 @@ body {
       display: block;
       opacity: 1;
     }
-
-    .title {
-        margin-top: 30px !important; 
-      }
-      .subtitle {
-        margin-top: 10px !important; 
-      }
   
     .metalcan-content.shift-left,
     .piri-content.shift-left,
@@ -2253,7 +2245,10 @@ body {
         transform: translateY(-50%);
         flex-direction: column;
         gap: 8px;
-    }
+      }
+      #homepage.page.active ~ .page-indicator {
+        display: none !important;
+      }
     .modal-body {
         margin-bottom: 30px;
     }
@@ -2262,26 +2257,27 @@ body {
         display: none !important;
       }
 
-    .modal-open .page {
-        pointer-events: none; /* Sayfalara tıklamayı engelle */
+      .modal-open .page {
+        pointer-events: none; /* Sayfa etkileşimini kapat */
       }
       .modal-open .modal {
-        pointer-events: auto; /* Sadece modal etkileşime açık */
+        pointer-events: auto; /* Sadece modal tıklanabilir */
       }
 
-    .modal-header {
+
+      .modal-header {
         position: sticky;
         top: 0;
         background: #fff;
-        z-index: 1; 
-        padding: 10px; 
+        z-index: 1;
+        padding: 10px;
         border-bottom: 1px solid #ddd;
-    }
-    .close-btn {
+      }
+      .close-btn {
         position: absolute;
         top: 10px;
         right: 10px;
-    }
+      }
   }
   
   @media (max-width: 768px) {
