@@ -2254,7 +2254,6 @@ body {
 
       .modal-open .page {
         pointer-events: none;
-        filter: blur(8px); 
     }
     
       .modal-open .modal {
