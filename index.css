@@ -2253,12 +2253,29 @@ body {
       }
 
       .modal-open .page {
-        pointer-events: none; /* Sayfa etkileşimini kapat */
-      }
+        pointer-events: none;
+        filter: blur(8px); 
+    }
+    
       .modal-open .modal {
         pointer-events: auto; /* Sadece modal tıklanabilir */
       }
 
+      .modal {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        max-width: 400px;
+        height: auto;
+        max-height: 80vh;
+        overflow-y: auto;
+        background: #fff;
+        z-index: 9999;
+        padding: 20px;
+        border-radius: 12px;
+    }
 
       .modal-header {
         position: sticky;
@@ -2354,5 +2371,24 @@ body {
       right: 10px !important;
     }
   }
+
+  @media (max-width: 430px) {
+    .modal {
+        width: 95%;
+        max-width: 380px;
+    }
+    .robot-image {
+        max-height: 40%;
+        width: auto;
+    }
+    .modal-header {
+        position: sticky;
+        top: 0;
+        background: white;
+        z-index: 100;
+        padding: 10px;
+    }
+}
+
 
   
