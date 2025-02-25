@@ -2174,8 +2174,8 @@ body {
         display: none;
         opacity: 0;
         z-index: 9999;
-        background: #fff !important; /* Modal arka planı */
-        color: #000 !important;      /* Metin rengi */
+        background: #fff !important;
+        color: #000 !important;
     }
     .metalcan-detail.active,
     .piri-detail.active,
@@ -2200,15 +2200,12 @@ body {
     }
   
     .page-indicator {
-        display: flex !important;
-        opacity: 1 !important;
-        visibility: visible !important;
         top: 50%;
         right: 10px;
         transform: translateY(-50%);
         flex-direction: column;
         gap: 8px;
-      }
+    }
       #homepage.page.active ~ .page-indicator {
         display: none !important;
       }
@@ -2217,25 +2214,38 @@ body {
     }
 
     .title {
-        position: absolute;
-        top: 12%; /* Başlık daha yukarı */
-        font-size: 1.8rem;
-        background: rgba(0, 0, 0, 0.6);
-        color: yellow;
-        padding: 8px 16px;
-        border-radius: 10px;
+        font-size: 1.5rem; /* Mobilde daha uygun */
+        margin-bottom: 10px;
     }
-    
+
     .subtitle {
-        position: absolute;
-        top: 20%; /* Açıklama başlığın biraz altında */
         font-size: 1rem;
-        max-width: 80%;
+        max-width: 90%;
         text-align: center;
         background: rgba(0, 0, 0, 0.6);
         color: white;
         padding: 8px 12px;
         border-radius: 8px;
+    }
+
+    /* Butonlar daha küçük ve mobil dostu olsun */
+    .detail-btn {
+        position: fixed;
+        bottom: 15px;
+        left: 15px;
+        width: 50px; /* Küçük yuvarlak */
+        height: 50px;
+        border-radius: 50%;
+        background: white;
+        color: black;
+        font-size: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+        z-index: 2000;
+        transition: transform 0.3s ease, opacity 0.3s ease;
     }
 
     .modal-open .page-indicator {
@@ -2298,27 +2308,6 @@ body {
         max-height: 45%;
     }
     
-    /* Detay Butonu - Küçük Yuvarlak */
-    .detail-btn {
-        position: fixed;
-        bottom: 15px;
-        left: 15px;
-        width: 50px; /* Küçük yuvarlak */
-        height: 50px;
-        border-radius: 50%;
-        background: white;
-        color: black;
-        font-size: 12px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
-        z-index: 2000;
-        transition: transform 0.3s ease, opacity 0.3s ease;
-    }
-    
-    /* Footer - Sağ Alt Köşeye */
     .footer {
         position: fixed;
         bottom: 15px;
@@ -2330,6 +2319,7 @@ body {
         color: white;
         z-index: 2000;
     }
+
   }
   
   @media (max-width: 480px) {
