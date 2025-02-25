@@ -2209,9 +2209,6 @@ body {
       #homepage.page.active ~ .page-indicator {
         display: none !important;
       }
-    .modal-body {
-        margin-bottom: 30px;
-    }
 
     .title {
         font-size: 1.5rem; /* Mobilde daha uygun */
@@ -2276,15 +2273,21 @@ body {
         border-radius: 12px;
     }
 
-      .modal-header {
+    .modal-header {
         position: sticky;
         top: 0;
-        background: #fff;
-        z-index: 1;
-        padding: 10px;
+        background: white;
+        z-index: 1000;
+        padding: 12px;
         border-bottom: 1px solid #ddd;
-      }
-      .close-btn {
+    }
+
+    .modal-body {
+        padding-top: 10px;
+        overflow-y: auto;
+        max-height: 70vh; 
+    }
+    .close-btn {
         position: absolute;
         top: 10px;
         right: 10px;
@@ -2317,13 +2320,7 @@ body {
   }
   
 @media (max-width: 768px) {
-    .robot-image {
-        position: absolute;
-        bottom: 15%;
-        width: auto;
-        max-height: 45%;
-    }
-    
+
     .footer {
         position: fixed;
         bottom: 15px;
@@ -2347,6 +2344,31 @@ body {
       left: 10px !important;
     }
   }
+
+  @media (max-width: 768px) {
+    .robot-image {
+        width: 60%;
+        max-width: 180px;
+        height: auto;
+        display: block;
+        margin: 10px auto;
+    }
+
+    .metalcan-content {
+        text-align: center;
+    }
+
+    .title {
+        font-size: 1.8rem;
+        font-weight: bold;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+        padding: 10px;
+    }
+}
+
     
   
   @media (max-width: 768px) {
@@ -2376,10 +2398,7 @@ body {
         width: 95%;
         max-width: 380px;
     }
-    .robot-image {
-        max-height: 40%;
-        width: auto;
-    }
+
     .modal-header {
         position: sticky;
         top: 0;
